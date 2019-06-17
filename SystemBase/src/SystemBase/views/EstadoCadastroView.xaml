@@ -14,68 +14,66 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
-	<Grid>
-		<StackPanel>
-			<Grid Height="60">
-				<Button HorizontalAlignment="Left" x:Name="btnNovoEstado" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoEstado_Click" >
-					<Button.Background>
-						<ImageBrush Stretch="Uniform" ImageSource="plus.png"/>
-					</Button.Background>
-				</Button>
 
-				<Button HorizontalAlignment="Left" x:Name="btVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtVolta_Click" >
-					<Button.Background>
-						<ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
-					</Button.Background>
-				</Button>
-				<Button HorizontalAlignment="Left" x:Name="btnRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtnRecarregar_Click" >
-					<Button.Background>
-						<ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
-					</Button.Background>
-				</Button>
+    <Grid>
+        <StackPanel>
+            <Grid Height="60">
+                <Button HorizontalAlignment="Left" x:Name="btnNovoEstado" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoEstado_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="phone-call (1).png"/>
+                    </Button.Background>
+                </Button>
 
-				<StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
-					<TextBox x:Name="tbPesquisa" materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
-					<Button x:Name="btnPesquisaEstado" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
-						<Button.Background>
-							<ImageBrush Stretch="Uniform" ImageSource="lupa.png"/>
-						</Button.Background>
-					</Button>
-				</StackPanel>
-			</Grid>
-		</StackPanel>
-		<Grid Height="auto" Margin="0 60">
-			<DataGrid x:Name="dgMostraEstados" Height="auto" Loaded="DgMostraEstados_Loaded"  SelectionMode="Single" IsReadOnly="True">
-				<DataGrid.Columns>
-					<DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
-						<DataGridTemplateColumn.CellTemplate>
-							<DataTemplate>
-								<Button x:Name="btnExcluirEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirEstado_Click">
-									<Button.Background>
-										<ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
-									</Button.Background>
-								</Button>
-							</DataTemplate>
-						</DataGridTemplateColumn.CellTemplate>
-					</DataGridTemplateColumn>
+                <Button HorizontalAlignment="Left" x:Name="btnVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtnVolta_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
+                    </Button.Background>
+                </Button>
+                <Button HorizontalAlignment="Left" x:Name="btnRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtnRecarregar_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
+                    </Button.Background>
+                </Button>
 
-					<DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ALTERAR" SortDirection="Ascending">
-						<DataGridTemplateColumn.CellTemplate>
-							<DataTemplate>
-								<Button x:Name="btnAlterarEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarEstado_Click">
-									<Button.Background>
-										<ImageBrush ImageSource="pencil.png" Stretch="Uniform"/>
-									</Button.Background>
-								</Button>
-							</DataTemplate>
-						</DataGridTemplateColumn.CellTemplate>
-					</DataGridTemplateColumn>
-				</DataGrid.Columns>
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <TextBox x:Name="tbPesquisa" materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
+                    <Button x:Name="btnPesquisaEstado" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="phone-call.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <Grid Height="auto" Margin="0 60">
+            <DataGrid x:Name="dgMostraEstados" Height="auto" Loaded="DgMostraEstados_Loaded"  SelectionMode="Single" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnExcluirEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirEstado_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
 
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ALTERAR" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnAlterarEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarEstado_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="phone-call (2).png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </Grid>
 
-			</DataGrid>
-		</Grid>
-		</Grid>
-
-
+    </Grid>
 </Window>

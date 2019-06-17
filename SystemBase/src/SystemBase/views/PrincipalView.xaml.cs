@@ -31,5 +31,10 @@ namespace SystemBase.views
         {
             new BancoCadastroView().Show();
         }
+
+        private void MiEstado_Click(object sender, RoutedEventArgs e)
+        {
+            new EstadoCadastroView().Show();
+        }
     }
 }

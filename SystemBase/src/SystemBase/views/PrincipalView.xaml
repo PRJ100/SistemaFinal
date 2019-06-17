@@ -25,7 +25,7 @@
                         <MenuItem x:Name="miBanco" Header="Banco" Click="BtnBanco_Click"/>
                         <MenuItem Header="Cidade"/>
                         <MenuItem x:Name="miContato" Header="Contato" Click="MiContato_Click"/>
-                        <MenuItem Header="Estado"/>
+                        <MenuItem x:Name="miEstado" Header="Estado" Click="MiEstado_Click" />
                         <MenuItem Header="Medicamento"/>
                         <MenuItem Header="Medico"/>
                         <MenuItem x:Name="miPacienteCadastro" Header="Paciente" Click="BtnPacienteCadastro_Click"/>

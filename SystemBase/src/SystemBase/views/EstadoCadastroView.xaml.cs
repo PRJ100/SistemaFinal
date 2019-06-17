@@ -1,18 +1,9 @@
-﻿using ModeloDeDados.Classes;
+﻿
+
+using ModeloDeDados.Classes;
 using ModeloDeDados.Dados;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SystemBase.views
 {
@@ -25,15 +16,14 @@ namespace SystemBase.views
         {
             InitializeComponent();
         }
+        public EstadoCadastroView(Estado es)
+        {
+            InitializeComponent();
+        }
 
         private void BtnNovoEstado_Click(object sender, RoutedEventArgs e)
         {
             new EstadoCadastro().Show();
-        }
-
-        private void BtVolta_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
         }
 
         private void BtnRecarregar_Click(object sender, RoutedEventArgs e)
@@ -42,12 +32,12 @@ namespace SystemBase.views
 
         }
 
-        private void BtnExcluirEstado_Click(object sender, RoutedEventArgs e)
+        private void DgMostraEstados_Loaded(object sender, RoutedEventArgs e)
         {
-
+            PreencherTabela();
         }
 
-        private void BtnAlterarEstado_Click(object sender, RoutedEventArgs e)
+        private void BtnExcluirEstado_Click(object sender, RoutedEventArgs e)
         {
             if (dgMostraEstados.SelectedIndex >= 0)
             {
@@ -65,11 +55,22 @@ namespace SystemBase.views
             PreencherTabela();
         }
 
-
-        private void DgMostraEstados_Loaded(object sender, RoutedEventArgs e)
+        private void BtnAlterarEstado_Click(object sender, RoutedEventArgs e)
         {
-            PreencherTabela();
+            Estado es = new Estado();
+            if (dgMostraEstados.SelectedIndex >= 0)
+            {
+                es = (Estado)dgMostraEstados.Items[dgMostraEstados.SelectedIndex];
+
+                new EstadoCadastro(es).Show();
+            }
         }
+
+        private void BtnVolta_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
         public void PreencherTabela()
         {
             using (DBContexto ctx = new DBContexto())
@@ -78,5 +79,6 @@ namespace SystemBase.views
                 dgMostraEstados.ItemsSource = consulta.ToList();
             }
         }
+
     }
 }
