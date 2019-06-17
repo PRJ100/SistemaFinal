@@ -26,5 +26,10 @@ namespace SystemBase.views
         {
             new ContatoCadastroView().Show();
         }
+
+        private void BtnBanco_Click(object sender, RoutedEventArgs e)
+        {
+            new BancoCadastroView().Show();
+        }
     }
 }

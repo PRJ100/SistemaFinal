@@ -148,6 +148,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="views\BancoCadastroView.xaml.cs">
+      <DependentUpon>BancoCadastroView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\ContatoCadastro.xaml.cs">
       <DependentUpon>ContatoCadastro.xaml</DependentUpon>
     </Compile>
@@ -192,6 +195,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="views\BancoCadastroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\ContatoCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -250,6 +257,15 @@
     <Resource Include="views\phone-call %281%29.png" />
     <Resource Include="views\phone-call %282%29.png" />
     <Resource Include="views\phone-call.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\bank.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\research.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\pencil.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
