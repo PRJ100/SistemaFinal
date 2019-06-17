@@ -160,6 +160,9 @@
     <Compile Include="views\ContatoCadastroView.xaml.cs">
       <DependentUpon>ContatoCadastroView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\EstadoCadastro.xaml.cs">
+      <DependentUpon>EstadoCadastro.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\EstadoCadastroView.xaml.cs">
       <DependentUpon>EstadoCadastroView.xaml</DependentUpon>
     </Compile>
@@ -220,6 +223,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\ContatoCadastroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\EstadoCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

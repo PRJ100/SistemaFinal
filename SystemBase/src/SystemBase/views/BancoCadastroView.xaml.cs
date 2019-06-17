@@ -27,12 +27,12 @@ namespace SystemBase.views
         }
         private void BtnNovoBanco_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void BtVolta_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            
         }
 
         private void BtRecarregar_Click(object sender, RoutedEventArgs e)
