@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace ModeloDeDados.Classes
@@ -30,10 +31,13 @@ namespace ModeloDeDados.Classes
         [StringLength(20)]
         public string RG { get; set; }
         public int ContatoId { get; set; }
+        [ForeignKey("ContatoId")]
         public List<Cotato> Contatos { get; set; }
         public int CepId { get; set; }
+        [ForeignKey("CepId")]
         public Cep Cep { get; set; }
         public int CidadeId { get; set; }
+        [ForeignKey("CidadeId")]
         public Cidade Cidade { get; set; }
         [StringLength(100)]
         public string Logradouro { get; set; }

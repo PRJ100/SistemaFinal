@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace ModeloDeDados.Classes
@@ -10,6 +11,7 @@ namespace ModeloDeDados.Classes
         [Key]
         public int ReciboId { get; set; }
         public int PessoaId { get; set; }
+        [ForeignKey("PessoaId")]
         public Pessoa Pessoa { get; set; }
         public int Proficional { get; set; }
         public decimal Valor { get; set; }
