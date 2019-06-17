@@ -9,7 +9,7 @@ namespace ModeloDeDados.Classes
     {
         [Key]
         public int BancoId { get; set; }
-        [StringLength(20)]
+        [StringLength(50)]
         public string Nome { get; set; }
         public int Codigo { get; set; }
     }

@@ -27,12 +27,12 @@ namespace SystemBase.views
         }
         private void BtnNovoBanco_Click(object sender, RoutedEventArgs e)
         {
-           
+            new BancoCadastro().Show();
         }
 
         private void BtVolta_Click(object sender, RoutedEventArgs e)
         {
-            
+            this.Close();
         }
 
         private void BtRecarregar_Click(object sender, RoutedEventArgs e)
@@ -47,7 +47,20 @@ namespace SystemBase.views
 
         private void BtnExcluirBanco_Click(object sender, RoutedEventArgs e)
         {
+            if (dgMostraBanco.SelectedIndex >= 0)
+            {
+                Banco b = (Banco)dgMostraBanco.Items[dgMostraBanco.SelectedIndex];
 
+
+                using (DBContexto ctx = new DBContexto())
+                {
+                    b = ctx.Bancos.Find(b.BancoId);
+                    ctx.Bancos.Remove(b);
+                    ctx.SaveChanges();
+                }
+
+            }
+            PreencherTabela();
         }
 
         private void BtnAlterarBanco_Click(object sender, RoutedEventArgs e)
