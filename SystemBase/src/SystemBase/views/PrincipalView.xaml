@@ -22,6 +22,7 @@
             <Grid Background="Black">
                 <Menu Background="Black" Padding="0" x:Name="menu" HorizontalAlignment="Left"  Height="40" Margin="0" VerticalAlignment="Top" Width="auto">
                     <MenuItem Header="Cadastro" Height="40">
+                        <MenuItem x:Name="miBanco" Header="Banco" Click="BtnBanco_Click"/>
                         <MenuItem Header="Cidade"/>
                         <MenuItem x:Name="miContato" Header="Contato" Click="MiContato_Click"/>
                         <MenuItem Header="Estado"/>

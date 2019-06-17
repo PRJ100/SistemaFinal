@@ -1,11 +1,11 @@
-﻿<Window x:Class="SystemBase.views.BancoCadastroView"
+﻿<Window x:Class="SystemBase.views.PlanoCadastroView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SystemBase.views"
         mc:Ignorable="d"
-        Title="BancoCadastroView" Height="450" Width="800"
+        Title="PlanoCadastroView" Height="450" Width="800"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -17,18 +17,18 @@
     <Grid>
         <StackPanel>
             <Grid Height="60">
-                <Button HorizontalAlignment="Left" x:Name="btnNovoBanco" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoBanco_Click" >
+                <Button HorizontalAlignment="Left" x:Name="btnNovoPlano" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoPlano_Click" >
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="bank.png"/>
                     </Button.Background>
                 </Button>
 
-                <Button HorizontalAlignment="Left" x:Name="btVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtVolta_Click" >
+                <Button HorizontalAlignment="Left" x:Name="btnVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtnVolta_Click" >
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
                     </Button.Background>
                 </Button>
-                <Button HorizontalAlignment="Left" x:Name="btRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtRecarregar_Click" >
+                <Button HorizontalAlignment="Left" x:Name="btnRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtnRecarregar_Click" >
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
                     </Button.Background>
@@ -36,7 +36,7 @@
 
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                     <TextBox x:Name="tbPesquisa" materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
-                    <Button x:Name="btnPesquisaBanco" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
+                    <Button x:Name="btnPesquisaPlano" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
                         <Button.Background>
                             <ImageBrush Stretch="Uniform" ImageSource="research.png"/>
                         </Button.Background>
@@ -45,12 +45,12 @@
             </Grid>
         </StackPanel>
         <Grid Height="auto" Margin="0 60">
-            <DataGrid x:Name="dgMostraBanco" Height="auto" Loaded="DgMostraBanco_Loaded"  SelectionMode="Single" IsReadOnly="True">
+            <DataGrid x:Name="dgMostraPlano" Height="auto" Loaded="DgMostraPlano_Loaded"  SelectionMode="Single" IsReadOnly="True">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnExcluirBanco" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirBanco_Click">
+                                <Button x:Name="btnExcluirPlano" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirPlano_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -62,7 +62,7 @@
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ALTERAR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnAlterarBanco" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarBanco_Click">
+                                <Button x:Name="btnAlterarPlano" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarPlano_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="pencil.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -75,6 +75,6 @@
 
             </DataGrid>
         </Grid>
-        
+
     </Grid>
 </Window>

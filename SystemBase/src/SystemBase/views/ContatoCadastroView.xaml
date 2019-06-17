@@ -23,12 +23,12 @@
                     </Button.Background>
                 </Button>
 
-                <Button HorizontalAlignment="Left" x:Name="btVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtVolta_Click_1" >
+                <Button HorizontalAlignment="Left" x:Name="btnVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtVolta_Click" >
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
                     </Button.Background>
                 </Button>
-                <Button HorizontalAlignment="Left" x:Name="btRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtRecarregar_Click_1" >
+                <Button HorizontalAlignment="Left" x:Name="btnRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtRecarregar_Click" >
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
                     </Button.Background>

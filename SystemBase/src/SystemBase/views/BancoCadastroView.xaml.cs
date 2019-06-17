@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ModeloDeDados.Classes;
+using ModeloDeDados.Dados;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,50 @@ namespace SystemBase.views
         public BancoCadastroView()
         {
             InitializeComponent();
+        }
+        private void BtnNovoBanco_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtVolta_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BtRecarregar_Click(object sender, RoutedEventArgs e)
+        {
+            PreencherTabela();
+        }
+
+        private void DgMostraBanco_Loaded(object sender, RoutedEventArgs e)
+        {
+            PreencherTabela();
+        }
+
+        private void BtnExcluirBanco_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnAlterarBanco_Click(object sender, RoutedEventArgs e)
+        {
+            Banco b = new Banco();
+            if (dgMostraBanco.SelectedIndex >= 0)
+            {
+                b = (Banco)dgMostraBanco.Items[dgMostraBanco.SelectedIndex];
+
+                new BancoCadastro(b).Show();
+
+            }
+        }
+        public void PreencherTabela()
+        {
+            using (DBContexto ctx = new DBContexto())
+            {
+                var consulta = ctx.Bancos;
+                dgMostraBanco.ItemsSource = consulta.ToList();
+            }
         }
     }
 }

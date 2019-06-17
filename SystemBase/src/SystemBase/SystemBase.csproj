@@ -148,6 +148,9 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="views\BancoCadastro.xaml.cs">
+      <DependentUpon>BancoCadastro.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\BancoCadastroView.xaml.cs">
       <DependentUpon>BancoCadastroView.xaml</DependentUpon>
     </Compile>
@@ -162,6 +165,12 @@
     </Compile>
     <Compile Include="views\PacienteCadastroView.xaml.cs">
       <DependentUpon>PacienteCadastroView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\PlanoCadastro.xaml.cs">
+      <DependentUpon>PlanoCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\PlanoCadastroView.xaml.cs">
+      <DependentUpon>PlanoCadastroView.xaml</DependentUpon>
     </Compile>
     <Compile Include="views\PrincipalView.xaml.cs">
       <DependentUpon>PrincipalView.xaml</DependentUpon>
@@ -195,6 +204,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="views\BancoCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\BancoCadastroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -212,6 +225,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\PacienteCadastroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\PlanoCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\PlanoCadastroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
