@@ -1,0 +1,81 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemBase.views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:System="clr-namespace:System;assembly=mscorlib" x:Class="SystemBase.views.PacienteCadastroView"
+        mc:Ignorable="d"
+        Title="PacienteCadastroView" Height="600" Width="1080"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <StackPanel>
+            <Grid Height="60">
+                <Button HorizontalAlignment="Left" x:Name="btnNovoPaciente" BorderBrush="{x:Null}" Width="60" Margin="20 0 20 0" Height="auto" Click="BtnNovoPaciente_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="user.png"/>
+                    </Button.Background>
+                </Button>
+                
+                <Button HorizontalAlignment="Left" x:Name="btVolta" BorderBrush="{x:Null}" Width="60" Margin="200,0,0,0" Height="auto" Click="BtVolta_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
+                    </Button.Background>
+                </Button>
+                <Button HorizontalAlignment="Left" x:Name="btRecarregar" BorderBrush="{x:Null}" Width="60" Margin="108,0,0,0" Height="auto" Click="BtRecarregar_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
+                    </Button.Background>
+                </Button>
+                
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <TextBox materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
+                    <Button x:Name="btnPesquisaPaciente" BorderBrush="{x:Null}" Width="60" Height="auto" Margin="5 2 10 2">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="user (2).png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <Grid Height="auto" Margin="0 60">
+            <DataGrid x:Name="dgMostraPaciente" Height="auto" Loaded="DgMostraPaciente_Loaded"  SelectionMode="Single" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnExcluirPaciente" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirPaciente_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ALTERAR" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnAlterarPaciente" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarPaciente_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="user (1).png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+</Window>

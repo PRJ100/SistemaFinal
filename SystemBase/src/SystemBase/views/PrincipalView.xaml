@@ -1,0 +1,103 @@
+﻿<Window x:Class="SystemBase.views.PrincipalView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemBase.views"
+        mc:Ignorable="d"
+        Title="PrincipalView" Width="1080" ResizeMode="CanMinimize" WindowState="Maximized"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}" Height="600" WindowStyle="None">
+    <Grid>
+        <StackPanel>
+            <!--
+        Inicio da barra de menu superior
+        -->
+            <Grid Background="Black">
+                <Menu Background="Black" Padding="0" x:Name="menu" HorizontalAlignment="Left"  Height="40" Margin="0" VerticalAlignment="Top" Width="auto">
+                    <MenuItem Header="Cadastro" Height="40">
+                        <MenuItem Header="Cidade"/>
+                        <MenuItem x:Name="miContato" Header="Contato" Click="MiContato_Click"/>
+                        <MenuItem Header="Estado"/>
+                        <MenuItem Header="Medicamento"/>
+                        <MenuItem Header="Medico"/>
+                        <MenuItem x:Name="miPacienteCadastro" Header="Paciente" Click="BtnPacienteCadastro_Click"/>
+                        <MenuItem Header="Pais"/>
+                        <MenuItem Header="Usuário"/>
+                    </MenuItem>
+                    <MenuItem Header="Consulta" Height="40"/>
+                    <MenuItem Header="Finânceiro" Height="40">
+                        <MenuItem Header="Contas a pagar"/>
+                        <MenuItem Header="Contas a Receber"/>
+                        <MenuItem Header="Notas Fiscais"/>
+                        <MenuItem Header="Relatório Mensal"/>
+                    </MenuItem>
+                    <MenuItem Header="Consulta" Height="40"/>
+                    <MenuItem Header="Consulta" Height="40"/>
+                </Menu>
+                <StackPanel HorizontalAlignment="Right">
+                    <Button x:Name="btnClose" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click">
+                        <materialDesign:PackIcon Kind="Close"/>
+                    </Button>
+                </StackPanel>
+            </Grid>
+            <!-- 
+        Final
+        -->
+        </StackPanel>
+        <!-- Inicio do corpo da tela principal -->
+        <Grid x:Name="gridPrincipal" Margin=" 0 40 0 0">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button x:Name="btnPacienteCadastro" BorderBrush="{x:Null}" Click="BtnPacienteCadastro_Click" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="1" Margin="40 40 40 10" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="user.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <TextBlock Margin="0 10 0 0" Text="Paciente" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+
+            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="2" Margin="40 40 40 10" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="notes.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <TextBlock Margin="0 10 0 0" Text="Finanças" Grid.Column="2" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+
+            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="3" Margin="40 40 40 10" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="pie-chart.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <TextBlock Margin="0 10 0 0" Text="Relatório" Grid.Column="3" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="4" Margin="40,40,40,10" Click="MiContato_Click" Grid.Row="0">
+                <Button.Background>
+                    <ImageBrush ImageSource="phone-call (1).png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <TextBlock Margin="0 10 0 0" Text="Contato" Grid.Column="4" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+
+        </Grid>
+        <!-- Final -->
+    </Grid>
+</Window>

@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Blend for Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ModeloDeDados", "src\ModeloDeDados\ModeloDeDados.csproj", "{CB372A9B-232B-40FB-A14A-BBEA7DC8DB2F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SystemBase", "src\SystemBase\SystemBase.csproj", "{CE103C0D-8E5D-4E12-A397-FD9211839295}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		EasyTest|Any CPU = EasyTest|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CB372A9B-232B-40FB-A14A-BBEA7DC8DB2F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CB372A9B-232B-40FB-A14A-BBEA7DC8DB2F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CB372A9B-232B-40FB-A14A-BBEA7DC8DB2F}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{CB372A9B-232B-40FB-A14A-BBEA7DC8DB2F}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{CB372A9B-232B-40FB-A14A-BBEA7DC8DB2F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CB372A9B-232B-40FB-A14A-BBEA7DC8DB2F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE103C0D-8E5D-4E12-A397-FD9211839295}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE103C0D-8E5D-4E12-A397-FD9211839295}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE103C0D-8E5D-4E12-A397-FD9211839295}.EasyTest|Any CPU.ActiveCfg = Release|Any CPU
+		{CE103C0D-8E5D-4E12-A397-FD9211839295}.EasyTest|Any CPU.Build.0 = Release|Any CPU
+		{CE103C0D-8E5D-4E12-A397-FD9211839295}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE103C0D-8E5D-4E12-A397-FD9211839295}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1D0C2573-CB4B-4555-A8EE-8903BC25CB59}
+	EndGlobalSection
+EndGlobal

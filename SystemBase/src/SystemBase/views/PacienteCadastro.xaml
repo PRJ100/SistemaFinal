@@ -1,0 +1,129 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemBase.views"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" x:Class="SystemBase.views.PacienteCadastro"
+        mc:Ignorable="d"
+        Title="PacienteCadastro" Height="596.4" Width="800"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+         FontFamily="{DynamicResource MaterialDesignFont}">
+
+    <Grid>
+        <Grid Margin="0,0,-0.4,33.2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="200*"/>
+                <ColumnDefinition Width="197*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Margin="0,10, 0, 0" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbNome" materialDesign:HintAssist.Hint="Nome:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+            </Grid>
+            <Grid Margin="0,10,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbCpf" materialDesign:HintAssist.Hint="CPF" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
+            </Grid>
+
+            <Grid Margin="0,50,0,0" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbRg" materialDesign:HintAssist.Hint="RG:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+            </Grid>
+            <Grid Margin="0,50,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbNomeMae" materialDesign:HintAssist.Hint="Nome da Mãe:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
+            </Grid>
+
+            <Grid Margin="0,90,0,0" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbNomePai" materialDesign:HintAssist.Hint="Nome de Pai:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+            </Grid>
+            <Grid Margin="0,90,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <ComboBox x:Name="cbEstadoCivil" materialDesign:HintAssist.Hint="Estado Civil:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0">
+                    <ComboBoxItem Content="Casado"/>
+                    <ComboBoxItem Content="Divorciado"/>
+                    <ComboBoxItem Content="Solteiro"/>
+                    <ComboBoxItem Content="Viuvo"/>
+                    <ComboBoxItem Content="Casada"/>
+                    <ComboBoxItem Content="Divorciada"/>
+                    <ComboBoxItem Content="Solteira"/>
+                    <ComboBoxItem Content="Viuva"/>
+                </ComboBox>
+            </Grid>
+
+            <Grid Margin="0,130,0,0" Height="40" VerticalAlignment="Top">
+                <DatePicker x:Name="dpNascimento" materialDesign:HintAssist.Hint="Data de Nascimento:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+            </Grid>
+            <Grid Margin="0,130,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbIdade" materialDesign:HintAssist.Hint="Idade:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
+            </Grid>
+
+            <Grid Margin="0,170,0,0" Height="40" VerticalAlignment="Top">
+                <ComboBox x:Name="cbSexo" materialDesign:HintAssist.Hint="Sexo:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0">
+                    <ComboBoxItem Content="Feminino"/>
+                    <ComboBoxItem Content="Masculino"/>
+                </ComboBox>
+            </Grid>
+            <Grid Margin="0,170,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbNaturidade" materialDesign:HintAssist.Hint="Naturidade:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
+            </Grid>
+
+            <Grid Margin="0,210,0,0" Height="40" VerticalAlignment="Top">
+                <ComboBox x:Name="cbContato" ItemsSource="{Binding}" SelectedValuePath="ContatoId" DisplayMemberPath="Nome" materialDesign:HintAssist.Hint="Contato:" materialDesign:HintAssist.IsFloating="True"  Height="40.001" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,-0.001,10,0" />
+            </Grid>
+            <Grid Margin="0,210,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <ComboBox x:Name="cbCep" ItemsSource="{Binding}" DisplayMemberPath="NumeroCep" SelectedValuePath="CepId" materialDesign:HintAssist.Hint="Cep:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
+            </Grid>
+
+            <Grid Margin="0,250,0,0" Height="40" VerticalAlignment="Top">
+                <ComboBox x:Name="cbCidade" ItemsSource="{Binding}" DisplayMemberPath="Nome" SelectedValuePath="CidadeId" materialDesign:HintAssist.Hint="Cidade:" materialDesign:HintAssist.IsFloating="True"  Height="40.001" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,-0.001,10,0" />
+            </Grid>
+            <Grid Margin="0,250,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbLogradouro" materialDesign:HintAssist.Hint="Logradouro:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
+            </Grid>
+
+            <Grid Margin="0,290,0,0" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbBairro" materialDesign:HintAssist.Hint="Bairro:" materialDesign:HintAssist.IsFloating="True"  Height="40.001" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,-0.001,10,0" />
+            </Grid>
+            <Grid Margin="0,290,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbNumero" materialDesign:HintAssist.Hint="Número:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
+            </Grid>
+
+            <Grid Margin="0,330,0,0" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbComplemento" materialDesign:HintAssist.Hint="Complemento:" materialDesign:HintAssist.IsFloating="True"  Height="40.001" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,-0.001,10,0" />
+            </Grid>
+            <Grid Margin="0,330,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <DatePicker x:Name="dpDataCadastro" materialDesign:HintAssist.Hint="Data do Cadastro:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
+            </Grid>
+
+            <Grid Margin="0,370,0,0" Height="40" VerticalAlignment="Top">
+                <ComboBox x:Name="cbStatus" materialDesign:HintAssist.Hint="Status do Cadastro:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0">
+                    <ComboBoxItem Content="Ativo"/>
+                    <ComboBoxItem Content="Inativo"/>
+                </ComboBox>
+            </Grid>
+            <Grid Margin="0,370,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbCodigo" materialDesign:HintAssist.Hint="Codigo:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" IsEnabled="False" />
+            </Grid>
+            <Grid Margin="0,410,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbDataAlteracao" materialDesign:HintAssist.Hint="Data Da Alteração:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" IsEnabled="False" />
+            </Grid>
+            <Button x:Name="btnCancelar" Content="" HorizontalAlignment="Left" Margin="344,492,0,0" VerticalAlignment="Top" Width="34" BorderBrush="{x:Null}" Click="BtnCancelar_Click">
+                <Button.Background>
+                    <ImageBrush Stretch="Uniform" ImageSource="delete.png"/>
+                </Button.Background>
+            </Button>
+            <Grid Margin="0,411,0,0" Height="40" VerticalAlignment="Top">
+                <ComboBox x:Name="cbTipoPessoa" materialDesign:HintAssist.Hint="Tipo de Pessoa:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0">
+                    <ComboBoxItem Content="Paciente"/>
+                    <ComboBoxItem Content="Funcionário"/>
+                </ComboBox>
+            </Grid>
+        </Grid>
+        <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="32" Margin="288,493,0,0" VerticalAlignment="Top" Width="36" BorderBrush="{x:Null}" Click="Button_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="save.png" Stretch="Uniform"/>
+            </Button.Background>
+        </Button>
+    </Grid>
+</Window>
