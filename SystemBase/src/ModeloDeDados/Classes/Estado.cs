@@ -13,7 +13,6 @@ namespace ModeloDeDados.Classes
         [StringLength(100)]
         public string Nome { get; set; }
         public int PaisId { get; set; }
-        [ForeignKey("PaisId")]
         public Pais Pais { get; set; }
         public List<Cidade> Cidades { get; set; }
         [StringLength(2)]

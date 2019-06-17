@@ -13,7 +13,6 @@ namespace ModeloDeDados.Classes
         [StringLength(100)]
         public string Nome { get; set; }
         public int EstadoId { get; set; }
-        [ForeignKey("EstadoId")]
         public Estado Estado { get; set; }
         public List<Cep> Ceps { get; set; }
         public int CodigoIBGE { get; set; }

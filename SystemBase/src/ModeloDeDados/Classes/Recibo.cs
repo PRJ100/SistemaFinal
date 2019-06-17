@@ -11,7 +11,6 @@ namespace ModeloDeDados.Classes
         [Key]
         public int ReciboId { get; set; }
         public int PessoaId { get; set; }
-        [ForeignKey("PessoaId")]
         public Pessoa Pessoa { get; set; }
         public int Proficional { get; set; }
         public decimal Valor { get; set; }

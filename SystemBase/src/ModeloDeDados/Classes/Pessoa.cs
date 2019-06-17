@@ -31,13 +31,10 @@ namespace ModeloDeDados.Classes
         [StringLength(20)]
         public string RG { get; set; }
         public int ContatoId { get; set; }
-        [ForeignKey("ContatoId")]
         public List<Cotato> Contatos { get; set; }
         public int CepId { get; set; }
-        [ForeignKey("CepId")]
         public Cep Cep { get; set; }
         public int CidadeId { get; set; }
-        [ForeignKey("CidadeId")]
         public Cidade Cidade { get; set; }
         [StringLength(100)]
         public string Logradouro { get; set; }

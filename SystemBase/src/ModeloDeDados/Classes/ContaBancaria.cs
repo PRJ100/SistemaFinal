@@ -13,7 +13,6 @@ namespace ModeloDeDados.Classes
         [StringLength(50)]
         public string Nome { get; set; }
         public int BancoId { get; set; }
-        [ForeignKey("BancoId")]
         public Banco Banco { get; set; }
         [StringLength(15)]
         public string Agencia { get; set; }
