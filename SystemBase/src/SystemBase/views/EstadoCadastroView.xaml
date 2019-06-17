@@ -28,7 +28,7 @@
 						<ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
 					</Button.Background>
 				</Button>
-				<Button HorizontalAlignment="Left" x:Name="btRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtRecarregar_Click" >
+				<Button HorizontalAlignment="Left" x:Name="btnRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtnRecarregar_Click" >
 					<Button.Background>
 						<ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
 					</Button.Background>
@@ -45,12 +45,12 @@
 			</Grid>
 		</StackPanel>
 		<Grid Height="auto" Margin="0 60">
-			<DataGrid x:Name="dgMostraContatos" Height="auto" Loaded="DgMostraContatos_Loaded"  SelectionMode="Single" IsReadOnly="True">
+			<DataGrid x:Name="dgMostraEstados" Height="auto" Loaded="DgMostraEstados_Loaded"  SelectionMode="Single" IsReadOnly="True">
 				<DataGrid.Columns>
 					<DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
 						<DataGridTemplateColumn.CellTemplate>
 							<DataTemplate>
-								<Button x:Name="btnExcluirContato" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirContato_Click">
+								<Button x:Name="btnExcluirEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirEstado_Click">
 									<Button.Background>
 										<ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
 									</Button.Background>
@@ -62,9 +62,9 @@
 					<DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ALTERAR" SortDirection="Ascending">
 						<DataGridTemplateColumn.CellTemplate>
 							<DataTemplate>
-								<Button x:Name="btnAlterarContato" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarContato_Click">
+								<Button x:Name="btnAlterarEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarEstado_Click">
 									<Button.Background>
-										<ImageBrush ImageSource="phone-call (2).png" Stretch="Uniform"/>
+										<ImageBrush ImageSource="pencil.png" Stretch="Uniform"/>
 									</Button.Background>
 								</Button>
 							</DataTemplate>

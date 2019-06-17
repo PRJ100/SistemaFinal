@@ -23,5 +23,35 @@ namespace SystemBase.views
         {
             InitializeComponent();
         }
+
+        private void BtnNovoEstado_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtVolta_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnRecarregar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnExcluirEstado_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnAlterarEstado_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void DgMostraEstados_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
