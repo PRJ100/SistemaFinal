@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ModeloDeDados.Classes;
+using ModeloDeDados.Dados;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,32 +28,60 @@ namespace SystemBase.views
 
         private void BtnNovoPlano_Click(object sender, RoutedEventArgs e)
         {
-
+            new PlanoCadastro().Show();
         }
 
         private void BtnVolta_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void BtnRecarregar_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void DgMostraPlano_Loaded(object sender, RoutedEventArgs e)
-        {
-
+            PreencherTabela();
         }
 
         private void BtnExcluirPlano_Click(object sender, RoutedEventArgs e)
         {
+            if (dgMostraPlanos.SelectedIndex >= 0)
+            {
+                Plano p = (Plano)dgMostraPlanos.Items[dgMostraPlanos.SelectedIndex];
 
+
+                using (DBContexto ctx = new DBContexto())
+                {
+                    p = ctx.Planos.Find(p.PlanoId);
+                    ctx.Planos.Remove(p);
+                    ctx.SaveChanges();
+                }
+
+            }
+            PreencherTabela();
         }
 
         private void BtnAlterarPlano_Click(object sender, RoutedEventArgs e)
         {
+            Plano p = new Plano();
+            if (dgMostraPlanos.SelectedIndex >= 0)
+            {
+                p = (Plano)dgMostraPlanos.Items[dgMostraPlanos.SelectedIndex];
 
+                new PlanoCadastro(p).Show();
+
+            }
+        }
+
+        private void DgMostraPlanos_Loaded(object sender, RoutedEventArgs e)
+        {
+            PreencherTabela();
+        }
+        public void PreencherTabela()
+        {
+            using (DBContexto ctx = new DBContexto())
+            {
+                var consulta = ctx.Planos;
+                dgMostraPlanos.ItemsSource = consulta.ToList();
+            }
         }
     }
 }

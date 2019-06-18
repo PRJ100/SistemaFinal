@@ -36,5 +36,10 @@ namespace SystemBase.views
         {
             new EstadoCadastroView().Show();
         }
+
+        private void MiPlano_Click(object sender, RoutedEventArgs e)
+        {
+            new PlanoCadastroView().Show();
+        }
     }
 }

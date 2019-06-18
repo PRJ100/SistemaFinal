@@ -19,7 +19,7 @@
             <Grid Height="60">
                 <Button HorizontalAlignment="Left" x:Name="btnNovoPlano" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoPlano_Click" >
                     <Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="bank.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="first-aid-kit.png"/>
                     </Button.Background>
                 </Button>
 
@@ -45,7 +45,7 @@
             </Grid>
         </StackPanel>
         <Grid Height="auto" Margin="0 60">
-            <DataGrid x:Name="dgMostraPlano" Height="auto" Loaded="DgMostraPlano_Loaded"  SelectionMode="Single" IsReadOnly="True">
+            <DataGrid x:Name="dgMostraPlanos" Height="auto" Loaded="DgMostraPlanos_Loaded"  SelectionMode="Single" IsReadOnly="True">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
