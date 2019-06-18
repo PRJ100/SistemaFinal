@@ -184,6 +184,12 @@
     <Compile Include="views\MedicamentoCadastroView.xaml.cs">
       <DependentUpon>MedicamentoCadastroView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\MedicoCadastro.xaml.cs">
+      <DependentUpon>MedicoCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\MedicoCadastroView.xaml.cs">
+      <DependentUpon>MedicoCadastroView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\PacienteCadastro.xaml.cs">
       <DependentUpon>PacienteCadastro.xaml</DependentUpon>
     </Compile>
@@ -279,6 +285,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\MedicamentoCadastroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\MedicoCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\MedicoCadastroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
