@@ -26,7 +26,7 @@
                         <MenuItem Header="Cidade"/>
                         <MenuItem x:Name="miContato" Header="Contato" Click="MiContato_Click"/>
                         <MenuItem x:Name="miEstado" Header="Estado" Click="MiEstado_Click" />
-                        <MenuItem Header="Medicamento"/>
+                        <MenuItem x:Name="miMedicamento" Header="Medicamento" Click="MiMedicamento_Click"/>
                         <MenuItem Header="Medico"/>
                         <MenuItem x:Name="miPacienteCadastro" Header="Paciente" Click="BtnPacienteCadastro_Click"/>
                         <MenuItem x:Name="miPais" Header="Pais" Click="MiPais_Click"/>

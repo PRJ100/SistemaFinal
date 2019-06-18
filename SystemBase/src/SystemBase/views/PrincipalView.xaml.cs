@@ -46,5 +46,11 @@ namespace SystemBase.views
         {
             new PaisCadastroView().Show();
         }
+
+        private void MiMedicamento_Click(object sender, RoutedEventArgs e)
+        {
+            new MedicamentoCadastroView().Show();
+        }
     }
+
 }
