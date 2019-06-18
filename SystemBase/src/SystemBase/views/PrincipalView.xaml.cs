@@ -51,6 +51,16 @@ namespace SystemBase.views
         {
             new MedicamentoCadastroView().Show();
         }
+
+        private void MiCidade_Click(object sender, RoutedEventArgs e)
+        {
+            new CidadeCadastroView().Show();
+        }
+
+        private void MiCep_Click(object sender, RoutedEventArgs e)
+        {
+            new CepCadastroView().Show();
+        }
     }
 
 }

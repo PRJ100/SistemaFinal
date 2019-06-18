@@ -1,12 +1,12 @@
-﻿<Window x:Class="SystemBase.views.EstadoCadastroView"
+﻿<Window x:Class="SystemBase.views.CidadeCadastroView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SystemBase.views"
         mc:Ignorable="d"
-        Title="EstadoCadastroView" Height="450" Width="800"
-		xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="CidadeCadastroView" Height="450" Width="800"
+  xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -14,22 +14,21 @@
         TextOptions.TextRenderingMode="Auto"
         Background="{DynamicResource MaterialDesignPaper}"
          FontFamily="{DynamicResource MaterialDesignFont}" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
-
     <Grid>
         <StackPanel>
             <Grid Height="60">
-                <Button HorizontalAlignment="Left" x:Name="btnNovoEstado" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoEstado_Click" >
+                <Button HorizontalAlignment="Left" x:Name="btnNovoCidade" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoCidade_Click" >
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="adicionar.png"/>
                     </Button.Background>
                 </Button>
 
-                <Button HorizontalAlignment="Left" x:Name="btnVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtnVolta_Click" >
+                <Button HorizontalAlignment="Left" x:Name="btVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtVolta_Click" >
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
                     </Button.Background>
                 </Button>
-                <Button HorizontalAlignment="Left" x:Name="btnRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtnRecarregar_Click" >
+                <Button HorizontalAlignment="Left" x:Name="btRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtRecarregar_Click" >
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
                     </Button.Background>
@@ -37,7 +36,7 @@
 
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                     <TextBox x:Name="tbPesquisa" materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
-                    <Button x:Name="btnPesquisaEstado" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
+                    <Button x:Name="btnPesquisaCidade" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
                         <Button.Background>
                             <ImageBrush Stretch="Uniform" ImageSource="research.png"/>
                         </Button.Background>
@@ -46,12 +45,12 @@
             </Grid>
         </StackPanel>
         <Grid Height="auto" Margin="0 60">
-            <DataGrid x:Name="dgMostraEstados" Height="auto" Loaded="DgMostraEstados_Loaded"  SelectionMode="Single" IsReadOnly="True">
+            <DataGrid x:Name="dgMostraCidade" Height="auto" Loaded="DgMostraCidade_Loaded"  SelectionMode="Single" IsReadOnly="True">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnExcluirEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirEstado_Click">
+                                <Button x:Name="btnExcluirCidade" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirCidade_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -63,7 +62,7 @@
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ALTERAR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnAlterarEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarEstado_Click">
+                                <Button x:Name="btnAlterarCidade" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarCidade_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="pencil.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -72,6 +71,8 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                 </DataGrid.Columns>
+
+
             </DataGrid>
         </Grid>
 

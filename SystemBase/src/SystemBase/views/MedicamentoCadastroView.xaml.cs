@@ -47,7 +47,20 @@ namespace SystemBase.views
 
         private void BtnExcluirMedicamento_Click(object sender, RoutedEventArgs e)
         {
+            if (dgMostraMedicamentos.SelectedIndex >= 0)
+            {
+                Medicamento m = (Medicamento)dgMostraMedicamentos.Items[dgMostraMedicamentos.SelectedIndex];
 
+
+                using (DBContexto ctx = new DBContexto())
+                {
+                    m = ctx.Medicamentos.Find(m.MedicamentoId);
+                    ctx.Medicamentos.Remove(m);
+                    ctx.SaveChanges();
+                }
+
+            }
+            PreencherTabela();
         }
 
         private void BtnAlterarMedicamento_Click(object sender, RoutedEventArgs e)
@@ -77,7 +90,7 @@ namespace SystemBase.views
             }
         }
 
-
+       
     }
 
 }
