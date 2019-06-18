@@ -14,12 +14,27 @@ namespace ModeloDeDados.Migrations
                 {
                     BancoId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(maxLength: 20, nullable: true),
+                    Nome = table.Column<string>(maxLength: 50, nullable: true),
                     Codigo = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Bancos", x => x.BancoId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Medicamentos",
+                columns: table => new
+                {
+                    MedicamentoId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
+                    Nome = table.Column<string>(maxLength: 100, nullable: true),
+                    Descricao = table.Column<string>(nullable: true),
+                    NumeroRegistro = table.Column<int>(nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Medicamentos", x => x.MedicamentoId);
                 });
 
             migrationBuilder.CreateTable(
@@ -156,14 +171,15 @@ namespace ModeloDeDados.Migrations
                     Sexo = table.Column<string>(maxLength: 50, nullable: true),
                     CPF = table.Column<string>(maxLength: 20, nullable: true),
                     RG = table.Column<string>(maxLength: 20, nullable: true),
-                    Contato = table.Column<int>(nullable: false),
+                    ContatoId = table.Column<int>(nullable: false),
+                    CepId = table.Column<int>(nullable: false),
+                    CidadeId = table.Column<int>(nullable: false),
                     Logradouro = table.Column<string>(maxLength: 100, nullable: true),
                     Bairro = table.Column<string>(maxLength: 100, nullable: true),
                     Numero = table.Column<string>(nullable: true),
                     Complemento = table.Column<string>(maxLength: 200, nullable: true),
                     DataCadastro = table.Column<DateTime>(nullable: false),
-                    Status = table.Column<string>(maxLength: 10, nullable: true),
-                    CepId = table.Column<int>(nullable: true)
+                    Status = table.Column<string>(maxLength: 10, nullable: true)
                 },
                 constraints: table =>
                 {
@@ -173,7 +189,13 @@ namespace ModeloDeDados.Migrations
                         column: x => x.CepId,
                         principalTable: "Ceps",
                         principalColumn: "CepId",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_Pessoas_Cidades_CidadeId",
+                        column: x => x.CidadeId,
+                        principalTable: "Cidades",
+                        principalColumn: "CidadeId",
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -252,6 +274,11 @@ namespace ModeloDeDados.Migrations
                 column: "CepId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Pessoas_CidadeId",
+                table: "Pessoas",
+                column: "CidadeId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Recibos_PessoaId",
                 table: "Recibos",
                 column: "PessoaId");
@@ -264,6 +291,9 @@ namespace ModeloDeDados.Migrations
 
             migrationBuilder.DropTable(
                 name: "Contatos");
+
+            migrationBuilder.DropTable(
+                name: "Medicamentos");
 
             migrationBuilder.DropTable(
                 name: "Planos");

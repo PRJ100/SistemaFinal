@@ -10,8 +10,8 @@ using ModeloDeDados.Dados;
 namespace ModeloDeDados.Migrations
 {
     [DbContext(typeof(DBContexto))]
-    [Migration("20190616220543_Initial1")]
-    partial class Initial1
+    [Migration("20190618203748_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,7 +30,7 @@ namespace ModeloDeDados.Migrations
                     b.Property<int>("Codigo");
 
                     b.Property<string>("Nome")
-                        .HasMaxLength(20);
+                        .HasMaxLength(50);
 
                     b.HasKey("BancoId");
 
@@ -155,6 +155,24 @@ namespace ModeloDeDados.Migrations
                     b.ToTable("Estados");
                 });
 
+            modelBuilder.Entity("ModeloDeDados.Classes.Medicamento", b =>
+                {
+                    b.Property<int>("MedicamentoId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<string>("Descricao");
+
+                    b.Property<string>("Nome")
+                        .HasMaxLength(100);
+
+                    b.Property<int>("NumeroRegistro");
+
+                    b.HasKey("MedicamentoId");
+
+                    b.ToTable("Medicamentos");
+                });
+
             modelBuilder.Entity("ModeloDeDados.Classes.Pais", b =>
                 {
                     b.Property<int>("PaisId")
@@ -190,7 +208,7 @@ namespace ModeloDeDados.Migrations
                     b.Property<string>("Complemento")
                         .HasMaxLength(200);
 
-                    b.Property<int>("Contato");
+                    b.Property<int>("ContatoId");
 
                     b.Property<DateTime>("DataCadastro");
 
