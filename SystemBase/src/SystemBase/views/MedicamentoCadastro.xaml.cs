@@ -1,4 +1,5 @@
 ﻿using ModeloDeDados.Classes;
+using ModeloDeDados.Dados;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,12 +41,42 @@ namespace SystemBase.views
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
+            Medicamento m = new Medicamento();
+            m.Nome = tbNome.Text;
+            m.Descricao = tbDescricao.Text;
+            m.NumeroRegistro = Convert.ToInt32(tbNumeroRegistro.Text);
 
+            if (op == "alterar")
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    m = ctx.Medicamentos.Find(Convert.ToInt32(tbCodigo.Text));
+                    if (m != null)
+                    {
+                        m.Nome = tbNome.Text;
+                        m.Descricao = tbDescricao.Text;
+                        m.NumeroRegistro = Convert.ToInt32(tbNumeroRegistro.Text);
+
+                        ctx.SaveChanges();
+                    }
+                }
+            }
+            else
+            {
+                using (var ctx = new DBContexto())
+                {
+                    ctx.Medicamentos.Add(m);
+                    ctx.SaveChanges();
+                }
+            }
+
+            this.Close();
         }
+    
 
-        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
+    private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+    {
+            this.Close();
     }
+}
 }
