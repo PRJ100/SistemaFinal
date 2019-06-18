@@ -10,8 +10,8 @@ using ModeloDeDados.Dados;
 namespace ModeloDeDados.Migrations
 {
     [DbContext(typeof(DBContexto))]
-    [Migration("20190617184445_Correção")]
-    partial class Correção
+    [Migration("20190618130748_Tole")]
+    partial class Tole
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,7 +30,7 @@ namespace ModeloDeDados.Migrations
                     b.Property<int>("Codigo");
 
                     b.Property<string>("Nome")
-                        .HasMaxLength(20);
+                        .HasMaxLength(50);
 
                     b.HasKey("BancoId");
 
@@ -110,7 +110,9 @@ namespace ModeloDeDados.Migrations
 
             modelBuilder.Entity("ModeloDeDados.Classes.Cotato", b =>
                 {
-                    b.Property<int>("ContatoId");
+                    b.Property<int>("ContatoId")
+                        .ValueGeneratedOnAdd()
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
                     b.Property<string>("Nome")
                         .HasMaxLength(100);
@@ -118,10 +120,14 @@ namespace ModeloDeDados.Migrations
                     b.Property<string>("Numero")
                         .HasMaxLength(16);
 
+                    b.Property<int?>("PessoaId");
+
                     b.Property<string>("Tipo")
                         .HasMaxLength(25);
 
                     b.HasKey("ContatoId");
+
+                    b.HasIndex("PessoaId");
 
                     b.ToTable("Contatos");
                 });
@@ -302,8 +308,7 @@ namespace ModeloDeDados.Migrations
                 {
                     b.HasOne("ModeloDeDados.Classes.Pessoa", "Pessoa")
                         .WithMany("Contatos")
-                        .HasForeignKey("ContatoId")
-                        .OnDelete(DeleteBehavior.Cascade);
+                        .HasForeignKey("PessoaId");
                 });
 
             modelBuilder.Entity("ModeloDeDados.Classes.Estado", b =>

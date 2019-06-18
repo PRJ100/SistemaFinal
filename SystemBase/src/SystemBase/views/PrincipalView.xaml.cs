@@ -41,5 +41,10 @@ namespace SystemBase.views
         {
             new PlanoCadastroView().Show();
         }
+
+        private void MiPais_Click(object sender, RoutedEventArgs e)
+        {
+            new PaisCadastroView().Show();
+        }
     }
 }

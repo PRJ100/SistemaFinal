@@ -172,6 +172,12 @@
     <Compile Include="views\PacienteCadastroView.xaml.cs">
       <DependentUpon>PacienteCadastroView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\PaisCadastro.xaml.cs">
+      <DependentUpon>PaisCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\PaisCadastroView.xaml.cs">
+      <DependentUpon>PaisCadastroView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\PlanoCadastro.xaml.cs">
       <DependentUpon>PlanoCadastro.xaml</DependentUpon>
     </Compile>
@@ -242,6 +248,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="views\PaisCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\PaisCadastroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\PlanoCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -304,6 +318,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="views\first-aid-kit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\africa.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

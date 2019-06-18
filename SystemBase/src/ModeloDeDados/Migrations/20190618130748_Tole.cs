@@ -2,7 +2,7 @@
 
 namespace ModeloDeDados.Migrations
 {
-    public partial class BancoAlter : Migration
+    public partial class Tole : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
