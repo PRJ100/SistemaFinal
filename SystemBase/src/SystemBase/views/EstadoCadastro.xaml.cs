@@ -74,7 +74,7 @@ namespace SystemBase.views
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
         private void PreencheComboBox()
         {
