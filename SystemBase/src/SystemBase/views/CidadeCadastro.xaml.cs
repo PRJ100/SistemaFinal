@@ -42,10 +42,7 @@ namespace SystemBase.views
             tbNome.Text = ci.Nome;
             tbCodigoIBGE.Text = ci.CodigoIBGE.ToString();
             cbCodigoEstado.SelectedValue = ci.EstadoId;
-
-
-
-
+            
         }
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
