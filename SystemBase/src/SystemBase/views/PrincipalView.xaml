@@ -20,7 +20,8 @@
         Inicio da barra de menu superior
         -->
             <Grid Background="#FF00008C">
-                <Menu Background="#FF00008C" Foreground="White" Padding="0" x:Name="menu" HorizontalAlignment="Left"  Height="40" Margin="0" VerticalAlignment="Top" Width="auto">
+                <Image Height="32" Source="Logotipo.png" HorizontalAlignment="Left" Margin="0"/>
+                <Menu Background="#FF00008C" Foreground="White" Padding="0" x:Name="menu" HorizontalAlignment="Left"  Height="40" Margin="80 0 0 0" VerticalAlignment="Top" Width="auto">
                     <MenuItem Header="Cadastro" Height="40">
                         <MenuItem x:Name="miBanco" Header="Banco" Click="BtnBanco_Click"/>
                         <MenuItem x:Name="miCidade" Header="Cidade" Click="MiCidade_Click"/>
@@ -35,16 +36,23 @@
                     </MenuItem>
                     <MenuItem Header="Consulta" Height="40"/>
                     <MenuItem Header="Finânceiro" Height="40">
-                        <MenuItem Header="Contas a pagar"/>
-                        <MenuItem Header="Contas a Receber"/>
+                        <MenuItem x:Name="miContasPagar" Header="Contas a pagar" Click="BtnContasPagar_Click"/>
+                        <MenuItem x:Name="miContasReceber" Header="Contas a Receber" Click="BtnContasReceber_Click"/>
                         <MenuItem Header="Notas Fiscais"/>
                         <MenuItem Header="Relatório Mensal"/>
                     </MenuItem>
                     <MenuItem Header="Consulta" Height="40"/>
                     <MenuItem Header="Consulta" Height="40"/>
                 </Menu>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment ="Right" Margin="0,0,100,0" Width="177">
+                    <materialDesign:PackIcon Kind="User" Width="30" Height="Auto" Foreground="#FFFFFF" Margin="0 0 0 5" VerticalAlignment="Center"/>
+                    <TextBlock x:Name="tbUsuario" Text="Usuário" FontSize="12" Foreground="#FFFFFF" VerticalAlignment="Center" Margin="13,10,0,10"/>
+                </StackPanel>
+                <Button x:Name="logout" Margin="0,0,60,7" Width="30" Height="30" Background="{x:Null}" BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" HorizontalAlignment="Right" VerticalAlignment="Bottom" Click="Logout_Click">
+                    <materialDesign:PackIcon Kind="Logout" Width="21" Height="Auto" Foreground="#FFFFFF"/>
+                </Button>
                 <StackPanel HorizontalAlignment="Right">
-                    <Button x:Name="btnClose" Background="{x:Null}" BorderBrush="{x:Null}" Click="Button_Click">
+                    <Button x:Name="btnClose" Background="{x:Null}" Margin="0 5 2 5" BorderBrush="{x:Null}" Click="Button_Click">
                         <materialDesign:PackIcon Kind="Close"/>
                     </Button>
                 </StackPanel>
@@ -72,54 +80,43 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button x:Name="btnPacienteCadastro" BorderBrush="{x:Null}" Click="BtnPacienteCadastro_Click" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="1" Margin="40 40 40 10" Grid.Row="0">
+            <Button x:Name="btnPacienteCadastro" BorderBrush="{x:Null}" Click="BtnPacienteCadastro_Click" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="1" Margin="40 40 40 20" Grid.Row="0">
                 <Button.Background>
                     <ImageBrush ImageSource="user (4).png" Stretch="Uniform"/>
                 </Button.Background>
             </Button>
             <TextBlock Margin="0 10 0 0" Text="Paciente" Grid.Column="1" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-
-            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="2" Margin="40 40 40 10" Grid.Row="0">
-                <Button.Background>
-                    <ImageBrush ImageSource="notes.png" Stretch="Uniform"/>
-                </Button.Background>
-            </Button>
-            <TextBlock Margin="0 10 0 0" Text="Finanças" Grid.Column="2" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-
-            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="3" Margin="40 40 40 10" Grid.Row="0">
-                <Button.Background>
-                    <ImageBrush ImageSource="pie-chart.png" Stretch="Uniform"/>
-                </Button.Background>
-            </Button>
-            <TextBlock Margin="0 10 0 0" Text="Relatório" Grid.Column="3" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-          
-            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="1" Margin="40,40,40,10" Click="BtnBanco_Click" x:Name="btnBanco" Grid.Row="1">
+            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="4" Margin="40,40,40,20" Click="BtnBanco_Click" x:Name="btnBanco" Grid.Row="0">
                 <Button.Background>
                     <ImageBrush ImageSource="bank.png" Stretch="Uniform"/>
                 </Button.Background>
             </Button>
-            <TextBlock Margin="0 10 0 0" Text="Banco" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+            <TextBlock Margin="0 10 0 0" Text="Banco" Grid.Column="4" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
 
-            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="2" Margin="40,40,40,10" Click="MiPlano_Click" x:Name="btnPlano" Grid.Row="1">
+            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="2" Margin="40,40,40,20" Click="MiPlano_Click" x:Name="btnPlano" Grid.Row="0">
                 <Button.Background>
                     <ImageBrush ImageSource="first-aid-kit.png" Stretch="Uniform"/>
                 </Button.Background>
             </Button>
-            <TextBlock Margin="0 10 0 0" Text="Plano" Grid.Column="2" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-
-            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="3" Margin="40,40,40,10" Click="MiPais_Click" x:Name="btnPais" Grid.Row="1">
-                <Button.Background>
-                    <ImageBrush ImageSource="africa.png" Stretch="Uniform"/>
-                </Button.Background>
-            </Button>
-            <TextBlock Margin="0 10 0 0" Text="Pais" Grid.Column="3" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-
-            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="4" Margin="40,40,40,10" Click="MiMedicamento_Click" x:Name="btnMedicamento" Grid.Row="1">
+            <TextBlock Margin="0 10 0 0" Text="Plano" Grid.Column="2" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="3" Margin="40,40,40,20" Click="MiMedicamento_Click" x:Name="btnMedicamento" Grid.Row="0">
                 <Button.Background>
                     <ImageBrush ImageSource="pill.png" Stretch="Uniform"/>
                 </Button.Background>
             </Button>
-            <TextBlock Margin="0 10 0 0" Text="Medicamento" Grid.Column="4" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+            <TextBlock Margin="0 10 0 0" Text="Medicamento" Grid.Column="3" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="1" Margin="40,40,40,20" Click="BtnContasReceber_Click" x:Name="btnContasReceber" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="exchange (1).png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <TextBlock Margin="0 10 0 0" Text="Contas a Receber" Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="2" Margin="40,40,40,20" Click="BtnContasPagar_Click" x:Name="btnContasPagar" Grid.Row="1">
+                <Button.Background>
+                    <ImageBrush ImageSource="exchange.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <TextBlock Margin="0 10 0 0" Text="Contas a Pagar" Grid.Column="2" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
 
 
         </Grid>

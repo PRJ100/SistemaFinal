@@ -65,6 +65,21 @@ namespace SystemBase.views
         {
             new UsuarioCadastroView().Show();
         }
+
+        private void Logout_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnContasReceber_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void BtnContasPagar_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
 }
