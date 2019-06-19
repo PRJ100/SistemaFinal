@@ -14,7 +14,6 @@ namespace SystemBase.views
     {
         public List<Cep> ceps { get; set; }
         public List<Cidade> cid { get; set; }
-        public List<Cotato> cont { get; set; }
         private string op = "";
         public PacienteCadastro()
         {
@@ -38,8 +37,8 @@ namespace SystemBase.views
             tbIdade.Text = p.Idade.ToString();
             cbSexo.Text = p.Sexo;
             tbNaturidade.Text = p.Naturalidade;
-            cbContato.SelectedValue = p.ContatoId;
             cbCep.SelectedValue = p.CepId;
+            tbContato.Text = p.Contato;
             cbCidade.SelectedValue = p.CidadeId;
             tbLogradouro.Text = p.Logradouro;
             tbBairro.Text = p.Bairro;
@@ -66,9 +65,9 @@ namespace SystemBase.views
             p.Idade = Convert.ToInt32(tbIdade.Text);
             p.Sexo = cbSexo.Text;
             p.Naturalidade = tbNaturidade.Text;
-            p.ContatoId = Convert.ToInt32(cbContato.SelectedValue);
             p.CepId = Convert.ToInt32(cbCep.SelectedValue);
             p.CidadeId = Convert.ToInt32(cbCidade.SelectedValue);
+            p.Contato = tbContato.Text;
             p.Logradouro = tbLogradouro.Text;
             p.Bairro = tbBairro.Text;
             p.Numero = tbNumero.Text;
@@ -94,9 +93,9 @@ namespace SystemBase.views
                         p.Idade = Convert.ToInt32(tbIdade.Text);
                         p.Sexo = cbSexo.Text;
                         p.Naturalidade = tbNaturidade.Text;
-                        p.ContatoId = Convert.ToInt32(cbContato.SelectedValue);
                         p.CepId = Convert.ToInt32(cbCep.SelectedValue);
                         p.CidadeId = Convert.ToInt32(cbCidade.SelectedValue);
+                        p.Contato = tbContato.Text;
                         p.Logradouro = tbLogradouro.Text;
                         p.Bairro = tbBairro.Text;
                         p.Numero = tbNumero.Text;
@@ -135,18 +134,13 @@ namespace SystemBase.views
 
                     var item2 = ctx.Cidades.ToList();
                     cid = item2;
-
-                    var item3 = ctx.Contatos.ToList();
-                    cont = item3;
-
                     cbCep.DataContext = ceps;
                     cbCidade.DataContext = cid;
-                    cbContato.DataContext = cont;
                 }
             }
             catch { }
         }
-       
+
 
     }
 }

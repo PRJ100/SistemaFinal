@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Text;
 
 namespace ModeloDeDados.Classes
@@ -8,7 +9,7 @@ namespace ModeloDeDados.Classes
    public  class Medico
     {
         [Key]
-       
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Crm { get; set; }
 
         [StringLength(100)]

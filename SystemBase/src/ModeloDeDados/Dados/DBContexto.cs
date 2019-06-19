@@ -13,7 +13,6 @@ namespace ModeloDeDados.Dados
         public DbSet<Cep> Ceps { get; set; }
         public DbSet<Cidade> Cidades { get; set; }
         public DbSet<ContaBancaria> ContasBancarias { get; set; }
-        public DbSet<Cotato> Contatos { get; set; }
         public DbSet<Estado> Estados { get; set; }
         public DbSet<Medicamento> Medicamentos { get; set; }
 

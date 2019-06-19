@@ -45,7 +45,7 @@
             </Grid>
         </StackPanel>
         <Grid Height="auto" Margin="0 60">
-            <DataGrid x:Name="dgMostraMedicamentos" Height="auto" Loaded="DgMostraMedicamentos_Loaded"  SelectionMode="Single" IsReadOnly="True">
+            <DataGrid x:Name="dgMostraMedicamentos" Height="auto" Loaded="DgMostraMedicamentos_Loaded"  SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
@@ -70,6 +70,31 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="NOME" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Nome}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="DESCRIÇÃO" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Descricao}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="N° R. MINISTERIO SAÚDE" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding NumeroRegistro}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    
+                    
                 </DataGrid.Columns>
 
 

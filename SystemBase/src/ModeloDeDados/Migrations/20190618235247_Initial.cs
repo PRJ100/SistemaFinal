@@ -38,6 +38,20 @@ namespace ModeloDeDados.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Medicos",
+                columns: table => new
+                {
+                    Crm = table.Column<int>(nullable: false),
+                    Especialidade = table.Column<string>(maxLength: 100, nullable: true),
+                    Nome = table.Column<string>(maxLength: 100, nullable: true),
+                    Telefone = table.Column<string>(maxLength: 20, nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Medicos", x => x.Crm);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "Paises",
                 columns: table => new
                 {
@@ -171,7 +185,7 @@ namespace ModeloDeDados.Migrations
                     Sexo = table.Column<string>(maxLength: 50, nullable: true),
                     CPF = table.Column<string>(maxLength: 20, nullable: true),
                     RG = table.Column<string>(maxLength: 20, nullable: true),
-                    ContatoId = table.Column<int>(nullable: false),
+                    Contato = table.Column<string>(maxLength: 80, nullable: true),
                     CepId = table.Column<int>(nullable: false),
                     CidadeId = table.Column<int>(nullable: false),
                     Logradouro = table.Column<string>(maxLength: 100, nullable: true),
@@ -196,28 +210,6 @@ namespace ModeloDeDados.Migrations
                         principalTable: "Cidades",
                         principalColumn: "CidadeId",
                         onDelete: ReferentialAction.NoAction);
-                });
-
-            migrationBuilder.CreateTable(
-                name: "Contatos",
-                columns: table => new
-                {
-                    ContatoId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn),
-                    Nome = table.Column<string>(maxLength: 100, nullable: true),
-                    Numero = table.Column<string>(maxLength: 16, nullable: true),
-                    Tipo = table.Column<string>(maxLength: 25, nullable: true),
-                    PessoaId = table.Column<int>(nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Contatos", x => x.ContatoId);
-                    table.ForeignKey(
-                        name: "FK_Contatos_Pessoas_PessoaId",
-                        column: x => x.PessoaId,
-                        principalTable: "Pessoas",
-                        principalColumn: "PessoaId",
-                        onDelete: ReferentialAction.Restrict);
                 });
 
             migrationBuilder.CreateTable(
@@ -259,11 +251,6 @@ namespace ModeloDeDados.Migrations
                 column: "BancoId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Contatos_PessoaId",
-                table: "Contatos",
-                column: "PessoaId");
-
-            migrationBuilder.CreateIndex(
                 name: "IX_Estados_PaisId",
                 table: "Estados",
                 column: "PaisId");
@@ -290,10 +277,10 @@ namespace ModeloDeDados.Migrations
                 name: "ContasBancarias");
 
             migrationBuilder.DropTable(
-                name: "Contatos");
+                name: "Medicamentos");
 
             migrationBuilder.DropTable(
-                name: "Medicamentos");
+                name: "Medicos");
 
             migrationBuilder.DropTable(
                 name: "Planos");

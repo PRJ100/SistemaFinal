@@ -21,12 +21,6 @@ namespace SystemBase.views
         {
             new PacienteCadastroView().Show();
         }
-
-        private void MiContato_Click(object sender, RoutedEventArgs e)
-        {
-            new ContatoCadastroView().Show();
-        }
-
         private void BtnBanco_Click(object sender, RoutedEventArgs e)
         {
             new BancoCadastroView().Show();

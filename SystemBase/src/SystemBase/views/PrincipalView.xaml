@@ -25,7 +25,6 @@
                         <MenuItem x:Name="miBanco" Header="Banco" Click="BtnBanco_Click"/>
                         <MenuItem x:Name="miCidade" Header="Cidade" Click="MiCidade_Click"/>
                         <MenuItem x:Name="miCep" Header="Cep" Click="MiCep_Click"/>
-                        <MenuItem x:Name="miContato" Header="Contato" Click="MiContato_Click"/>
                         <MenuItem x:Name="miEstado" Header="Estado" Click="MiEstado_Click" />
                         <MenuItem x:Name="miMedicamento" Header="Medicamento" Click="MiMedicamento_Click"/>
                         <MenuItem x:Name="miMedico" Header="Medico" Click="MiMedico_Click"/>
@@ -93,13 +92,7 @@
                 </Button.Background>
             </Button>
             <TextBlock Margin="0 10 0 0" Text="Relatório" Grid.Column="3" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="4" Margin="40,40,40,10" Click="MiContato_Click" Grid.Row="0">
-                <Button.Background>
-                    <ImageBrush ImageSource="phone-call (1).png" Stretch="Uniform"/>
-                </Button.Background>
-            </Button>
-            <TextBlock Margin="0 10 0 0" Text="Contato" Grid.Column="4" Grid.Row="0" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
-
+          
             <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="1" Margin="40,40,40,10" Click="BtnBanco_Click" x:Name="btnBanco" Grid.Row="1">
                 <Button.Background>
                     <ImageBrush ImageSource="bank.png" Stretch="Uniform"/>

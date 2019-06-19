@@ -1,4 +1,5 @@
-﻿using ModeloDeDados.Classes;
+﻿using Microsoft.EntityFrameworkCore;
+using ModeloDeDados.Classes;
 using ModeloDeDados.Dados;
 using System;
 using System.Collections.Generic;
@@ -78,7 +79,8 @@ namespace SystemBase.views
         {
             using (DBContexto ctx = new DBContexto())
             {
-                var consulta = ctx.Ceps;
+                var consulta = ctx.Ceps
+                    .Include(c => c.Cidade);
                 dgMostraCep.ItemsSource = consulta.ToList();
 
             }
