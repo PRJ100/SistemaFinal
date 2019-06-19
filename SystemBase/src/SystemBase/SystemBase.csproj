@@ -205,6 +205,12 @@
     <Compile Include="views\PrincipalView.xaml.cs">
       <DependentUpon>PrincipalView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\UsuarioCadastro.xaml.cs">
+      <DependentUpon>UsuarioCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\UsuarioCadastroView.xaml.cs">
+      <DependentUpon>UsuarioCadastroView.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -307,6 +313,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\PrincipalView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\UsuarioCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\UsuarioCadastroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
