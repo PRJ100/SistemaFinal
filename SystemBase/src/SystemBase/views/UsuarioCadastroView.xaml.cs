@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ModeloDeDados.Classes;
+using ModeloDeDados.Dados;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -26,27 +28,59 @@ namespace SystemBase.views
 
         private void BtnNovoUsuario_Click(object sender, RoutedEventArgs e)
         {
-
+            new UsuarioCadastro().Show();
         }
 
         private void BtVolta_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Close();
         }
 
         private void BtRecarregar_Click(object sender, RoutedEventArgs e)
         {
-
+            PreencherTabela();
         }
 
         private void DgMostraUsuario_Loaded(object sender, RoutedEventArgs e)
         {
-
+            PreencherTabela();
         }
 
         private void BtnAlterarUsuario_Click(object sender, RoutedEventArgs e)
         {
+            Usuario u = new Usuario();
+            if (dgMostraUsuarios.SelectedIndex >= 0)
+            {
+                u = (Usuario)dgMostraUsuarios.Items[dgMostraUsuarios.SelectedIndex];
 
+                new UsuarioCadastro(u).Show();
+            }
+        }
+
+        private void BtnExcluiUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            if (dgMostraUsuarios.SelectedIndex >= 0)
+            {
+                Usuario u = (Usuario)dgMostraUsuarios.Items[dgMostraUsuarios.SelectedIndex];
+
+
+                using (DBContexto ctx = new DBContexto())
+                {
+                    u = ctx.Usuarios.Find(u.UsuarioId);
+                    ctx.Usuarios.Remove(u);
+                    ctx.SaveChanges();
+                }
+
+            }
+            PreencherTabela();
+        }
+        public void PreencherTabela()
+        {
+            using (DBContexto ctx = new DBContexto())
+            {
+                var consulta = ctx.Usuarios;
+                dgMostraUsuarios.ItemsSource = consulta.ToList();
+            }
         }
     }
 }

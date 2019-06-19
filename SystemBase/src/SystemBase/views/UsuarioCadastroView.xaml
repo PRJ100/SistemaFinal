@@ -45,12 +45,12 @@
             </Grid>
         </StackPanel>
         <Grid Height="auto" Margin="0 60">
-            <DataGrid x:Name="dgMostraUsuario" Height="auto" Loaded="DgMostraUsuario_Loaded"  SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid x:Name="dgMostraUsuarios" Height="auto" Loaded="DgMostraUsuario_Loaded"  SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnExcluirBanco" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirBanco_Click">
+                                <Button x:Name="btnExcluiUsuario" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluiUsuario_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -62,7 +62,7 @@
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ALTERAR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnAlterarUsuario" Width="20" Padding="0" BorderBrush="{x:Null}" Click="">
+                                <Button x:Name="btnAlterarUsuario" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarUsuario_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="pencil.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -71,17 +71,24 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="NOME" SortDirection="Ascending" IsReadOnly="True">
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="LOGIN" SortDirection="Ascending" IsReadOnly="True">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Nome}"/>
+                                <TextBlock Text="{Binding Login}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="SENHA" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Codigo}"/>
+                                <TextBlock Text="{Binding Senha}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="NIVEL DE ACESSO" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding nivelAcesso}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

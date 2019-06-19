@@ -31,7 +31,7 @@
                         <MenuItem x:Name="miPacienteCadastro" Header="Paciente" Click="BtnPacienteCadastro_Click"/>
                         <MenuItem x:Name="miPais" Header="Pais" Click="MiPais_Click"/>
                         <MenuItem x:Name="miPlano" Header="Plano" Click="MiPlano_Click" />
-                        <MenuItem Header="Usuário"/>
+                        <MenuItem x:Name="miUsuario" Header="Usuário" Click="MiUsuario_Click"/>
                     </MenuItem>
                     <MenuItem Header="Consulta" Height="40"/>
                     <MenuItem Header="Finânceiro" Height="40">
