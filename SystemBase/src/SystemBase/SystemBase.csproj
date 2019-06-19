@@ -387,6 +387,12 @@
   <ItemGroup>
     <Resource Include="views\adicionar.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\medico.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\hospital.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

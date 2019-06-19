@@ -19,7 +19,7 @@
             <Grid Height="60">
                 <Button HorizontalAlignment="Left" x:Name="btnNovoMedico" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoMedico_Click" >
                     <Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="pill.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="Medico.png"/>
                     </Button.Background>
                 </Button>
 
@@ -38,7 +38,7 @@
                     <TextBox x:Name="tbPesquisa" materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
                     <Button x:Name="btnPesquisaMedico" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
                         <Button.Background>
-                            <ImageBrush Stretch="Uniform" ImageSource="research.png"/>
+                            <ImageBrush Stretch="Uniform" ImageSource="Hospital.png"/>
                         </Button.Background>
                     </Button>
                 </StackPanel>

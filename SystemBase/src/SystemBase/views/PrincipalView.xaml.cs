@@ -61,6 +61,11 @@ namespace SystemBase.views
         {
             new CepCadastroView().Show();
         }
+
+        private void MiMedico_Click(object sender, RoutedEventArgs e)
+        {
+            new MedicoCadastroView().Show();
+        }
     }
 
 }
