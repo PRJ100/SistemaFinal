@@ -22,11 +22,11 @@ namespace SystemBase.views
     public partial class UsuarioCadastro : Window
     {
         private string op = "";
-     
+
         public UsuarioCadastro()
         {
             InitializeComponent();
-             op = "";
+            op = "";
         }
         public UsuarioCadastro(Usuario u)
         {
@@ -35,7 +35,7 @@ namespace SystemBase.views
 
             tbCodigo.Text = u.UsuarioId.ToString();
             tbLogin.Text = u.Login;
-            tbSenha.Text = u.Senha;
+            pbSenha.Password = u.Senha;
             cbNivelDeAcesso.Text = u.nivelAcesso.ToString();
         }
 
@@ -43,7 +43,7 @@ namespace SystemBase.views
         {
             Usuario u = new Usuario();
             u.Login = tbLogin.Text;
-            u.Senha = tbSenha.Text;
+            u.Senha = pbSenha.Password;
             u.nivelAcesso = Convert.ToInt32(cbNivelDeAcesso.Text);
             if (op == "alterar")
             {
@@ -52,11 +52,17 @@ namespace SystemBase.views
                     u = ctx.Usuarios.Find(Convert.ToInt32(tbCodigo.Text));
                     if (u != null)
                     {
-
-                        u.Login = tbLogin.Text;
-                        u.Senha = tbSenha.Text;
-                        u.nivelAcesso = Convert.ToInt32(cbNivelDeAcesso.Text);
-                        ctx.SaveChanges();
+                        if (passwordBoxConfirmaSenha.Password == pbSenha.Password)
+                        {
+                            u.Login = tbLogin.Text;
+                            u.Senha = pbSenha.Password;
+                            u.nivelAcesso = Convert.ToInt32(cbNivelDeAcesso.Text);
+                            ctx.SaveChanges();
+                        }
+                    }
+                    else
+                    {
+                        labelSenha.Content = "Senha não confere!!";
                     }
                 }
             }
@@ -64,8 +70,17 @@ namespace SystemBase.views
             {
                 using (var ctx = new DBContexto())
                 {
-                    ctx.Usuarios.Add(u);
-                    ctx.SaveChanges();
+                    if (pbSenha.Password == passwordBoxConfirmaSenha.Password)
+                    {
+                        labelSenha.Content = "";
+                        ctx.Usuarios.Add(u);
+                        ctx.SaveChanges();
+                    }
+                    else
+                    {
+                        labelSenha.Content = "Senha não confere!!";
+                    }
+
                 }
             }
 
@@ -76,7 +91,7 @@ namespace SystemBase.views
         {
             this.Close();
         }
-     
-        }
+
     }
+}
 

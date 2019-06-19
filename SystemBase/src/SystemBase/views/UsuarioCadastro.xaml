@@ -12,7 +12,7 @@
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
+        Background="#FF5D6B99"
         FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
         <Grid Margin="0 10 0 0" VerticalAlignment="Top">
@@ -24,7 +24,7 @@
                 <TextBox x:Name="tbLogin" materialDesign:HintAssist.Hint="Login:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
             </Grid>
             <Grid Height="40" VerticalAlignment="Top" Grid.Column="1">
-                <TextBox x:Name="tbSenha" materialDesign:HintAssist.Hint="Senha:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+                <PasswordBox x:Name="pbSenha" materialDesign:HintAssist.Hint="Senha:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
             </Grid>
             <Grid Height="40" Margin="0 40 0 0" VerticalAlignment="Top" Grid.Column="1">
                 <ComboBox x:Name="cbNivelDeAcesso"  materialDesign:HintAssist.Hint="Nivel de Acesso:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0">
