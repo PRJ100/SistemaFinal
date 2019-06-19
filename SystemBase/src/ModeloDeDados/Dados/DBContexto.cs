@@ -15,15 +15,15 @@ namespace ModeloDeDados.Dados
         public DbSet<ContaBancaria> ContasBancarias { get; set; }
         public DbSet<Estado> Estados { get; set; }
         public DbSet<Medicamento> Medicamentos { get; set; }
-
         public DbSet<Medico> Medicos { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
 
 
 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=GUSTAVO-PC\SQLEXPRESS;Database=SISTEMBASE;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=DEAN\SQLEXPRESS;Database=SISTEMBASE;Trusted_Connection=True;");
 
         }
     }
