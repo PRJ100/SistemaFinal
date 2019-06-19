@@ -13,14 +13,14 @@
         TextElement.FontSize="13"
         TextOptions.TextFormattingMode="Ideal"
         TextOptions.TextRenderingMode="Auto"
-        Background="{DynamicResource MaterialDesignPaper}"
+        Background="#FF5D6B99"
          FontFamily="{DynamicResource MaterialDesignFont}" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
     <Grid>
         <StackPanel>
             <Grid Height="60">
                 <Button HorizontalAlignment="Left" x:Name="btnNovoPaciente" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoPaciente_Click" >
                     <Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="user.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="user (4).png"/>
                     </Button.Background>
                 </Button>
                 
@@ -39,14 +39,14 @@
                     <TextBox materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
                     <Button x:Name="btnPesquisaPaciente" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
                         <Button.Background>
-                            <ImageBrush Stretch="Uniform" ImageSource="user (2).png"/>
+                            <ImageBrush Stretch="Uniform" ImageSource="user (5).png"/>
                         </Button.Background>
                     </Button>
                 </StackPanel>
             </Grid>
         </StackPanel>
         <Grid Height="auto" Margin="0 60">
-            <DataGrid x:Name="dgMostraPaciente" Height="auto" Loaded="DgMostraPaciente_Loaded"  SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid Background="#FFCCCEDB" x:Name="dgMostraPaciente" Height="auto" Loaded="DgMostraPaciente_Loaded"  SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
@@ -65,7 +65,7 @@
                             <DataTemplate>
                                 <Button x:Name="btnAlterarPaciente" Padding="0" Width="20" BorderBrush="{x:Null}" Click="BtnAlterarPaciente_Click">
                                     <Button.Background>
-                                        <ImageBrush ImageSource="user (1).png" Stretch="Uniform"/>
+                                        <ImageBrush ImageSource="use.png" Stretch="Uniform"/>
                                     </Button.Background>
                                 </Button>
                             </DataTemplate>
