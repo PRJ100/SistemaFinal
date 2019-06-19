@@ -1,5 +1,6 @@
 ﻿
 
+using Microsoft.EntityFrameworkCore;
 using ModeloDeDados.Classes;
 using ModeloDeDados.Dados;
 using System.Linq;
@@ -75,7 +76,8 @@ namespace SystemBase.views
         {
             using (DBContexto ctx = new DBContexto())
             {
-                var consulta = ctx.Estados;
+                var consulta = ctx.Estados
+                    .Include(p => p.Pais);
                 dgMostraEstados.ItemsSource = consulta.ToList();
             }
         }

@@ -166,12 +166,6 @@
     <Compile Include="views\CidadeCadastroView.xaml.cs">
       <DependentUpon>CidadeCadastroView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="views\ContatoCadastro.xaml.cs">
-      <DependentUpon>ContatoCadastro.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="views\ContatoCadastroView.xaml.cs">
-      <DependentUpon>ContatoCadastroView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="views\EstadoCadastro.xaml.cs">
       <DependentUpon>EstadoCadastro.xaml</DependentUpon>
     </Compile>
@@ -264,14 +258,6 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="views\ContatoCadastro.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="views\ContatoCadastroView.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="views\EstadoCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -357,11 +343,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="views\reload.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="views\phone-call %281%29.png" />
-    <Resource Include="views\phone-call %282%29.png" />
-    <Resource Include="views\phone-call.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="views\bank.png" />

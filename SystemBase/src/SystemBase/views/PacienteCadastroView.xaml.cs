@@ -1,4 +1,5 @@
-﻿using ModeloDeDados.Classes;
+﻿using Microsoft.EntityFrameworkCore;
+using ModeloDeDados.Classes;
 using ModeloDeDados.Dados;
 using System;
 using System.Collections.Generic;
@@ -36,14 +37,7 @@ namespace SystemBase.views
         {
             PreencherTabela();
         }
-        public void PreencherTabela()
-        {
-            using (DBContexto ctx = new DBContexto())
-            {
-                var consulta = ctx.Pessoas;
-                dgMostraPaciente.ItemsSource = consulta.ToList();
-            }
-        }
+
         private void BtVolta_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
@@ -82,6 +76,17 @@ namespace SystemBase.views
         private void BtRecarregar_Click(object sender, RoutedEventArgs e)
         {
             PreencherTabela();
+        }
+
+        public void PreencherTabela()
+        {
+            using (DBContexto ctx = new DBContexto())
+            {
+                var consulta = ctx.Pessoas
+                    .Include(c => c.Cep)
+                    .Include(c => c.Cidade);
+                dgMostraPaciente.ItemsSource = consulta.ToList();
+            }
         }
     }
 }

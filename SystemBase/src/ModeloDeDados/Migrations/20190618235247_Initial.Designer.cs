@@ -10,7 +10,7 @@ using ModeloDeDados.Dados;
 namespace ModeloDeDados.Migrations
 {
     [DbContext(typeof(DBContexto))]
-    [Migration("20190618203748_Initial")]
+    [Migration("20190618235247_Initial")]
     partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -108,30 +108,6 @@ namespace ModeloDeDados.Migrations
                     b.ToTable("ContasBancarias");
                 });
 
-            modelBuilder.Entity("ModeloDeDados.Classes.Cotato", b =>
-                {
-                    b.Property<int>("ContatoId")
-                        .ValueGeneratedOnAdd()
-                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
-
-                    b.Property<string>("Nome")
-                        .HasMaxLength(100);
-
-                    b.Property<string>("Numero")
-                        .HasMaxLength(16);
-
-                    b.Property<int?>("PessoaId");
-
-                    b.Property<string>("Tipo")
-                        .HasMaxLength(25);
-
-                    b.HasKey("ContatoId");
-
-                    b.HasIndex("PessoaId");
-
-                    b.ToTable("Contatos");
-                });
-
             modelBuilder.Entity("ModeloDeDados.Classes.Estado", b =>
                 {
                     b.Property<int>("EstadoId")
@@ -173,6 +149,24 @@ namespace ModeloDeDados.Migrations
                     b.ToTable("Medicamentos");
                 });
 
+            modelBuilder.Entity("ModeloDeDados.Classes.Medico", b =>
+                {
+                    b.Property<int>("Crm");
+
+                    b.Property<string>("Especialidade")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Nome")
+                        .HasMaxLength(100);
+
+                    b.Property<string>("Telefone")
+                        .HasMaxLength(20);
+
+                    b.HasKey("Crm");
+
+                    b.ToTable("Medicos");
+                });
+
             modelBuilder.Entity("ModeloDeDados.Classes.Pais", b =>
                 {
                     b.Property<int>("PaisId")
@@ -208,7 +202,8 @@ namespace ModeloDeDados.Migrations
                     b.Property<string>("Complemento")
                         .HasMaxLength(200);
 
-                    b.Property<int>("ContatoId");
+                    b.Property<string>("Contato")
+                        .HasMaxLength(80);
 
                     b.Property<DateTime>("DataCadastro");
 
@@ -320,13 +315,6 @@ namespace ModeloDeDados.Migrations
                         .WithMany()
                         .HasForeignKey("BancoId")
                         .OnDelete(DeleteBehavior.Cascade);
-                });
-
-            modelBuilder.Entity("ModeloDeDados.Classes.Cotato", b =>
-                {
-                    b.HasOne("ModeloDeDados.Classes.Pessoa", "Pessoa")
-                        .WithMany("Contatos")
-                        .HasForeignKey("PessoaId");
                 });
 
             modelBuilder.Entity("ModeloDeDados.Classes.Estado", b =>
