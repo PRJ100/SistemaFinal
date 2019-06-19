@@ -52,17 +52,19 @@ namespace SystemBase.views
                     u = ctx.Usuarios.Find(Convert.ToInt32(tbCodigo.Text));
                     if (u != null)
                     {
-                        if (passwordBoxConfirmaSenha.Password == pbSenha.Password)
+                        if (pbConfirmaSenha.Password == pbSenha.Password)
                         {
                             u.Login = tbLogin.Text;
                             u.Senha = pbSenha.Password;
                             u.nivelAcesso = Convert.ToInt32(cbNivelDeAcesso.Text);
                             ctx.SaveChanges();
+                            this.Close();
                         }
-                    }
-                    else
-                    {
-                        labelSenha.Content = "Senha não confere!!";
+                        else
+                        {
+                            MessageBox.Show("Senha não Confere");
+
+                        }
                     }
                 }
             }
@@ -70,21 +72,22 @@ namespace SystemBase.views
             {
                 using (var ctx = new DBContexto())
                 {
-                    if (pbSenha.Password == passwordBoxConfirmaSenha.Password)
+                    if (pbSenha.Password == pbConfirmaSenha.Password)
                     {
-                        labelSenha.Content = "";
+
                         ctx.Usuarios.Add(u);
                         ctx.SaveChanges();
+                        this.Close();
                     }
                     else
                     {
-                        labelSenha.Content = "Senha não confere!!";
+                        MessageBox.Show("Senha não Cxonfere");
                     }
 
                 }
             }
 
-            this.Close();
+            
         }
 
         private void BtnCancelar_Click(object sender, RoutedEventArgs e)

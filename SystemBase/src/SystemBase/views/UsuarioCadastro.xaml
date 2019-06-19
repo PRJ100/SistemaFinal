@@ -27,6 +27,10 @@
                 <PasswordBox x:Name="pbSenha" materialDesign:HintAssist.Hint="Senha:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
             </Grid>
             <Grid Height="40" Margin="0 40 0 0" VerticalAlignment="Top" Grid.Column="1">
+                <PasswordBox x:Name="pbConfirmaSenha" materialDesign:HintAssist.Hint="Confirma Senha:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+            </Grid>
+       
+            <Grid Height="40" Margin="0 85 0 0" VerticalAlignment="Top" Grid.Column="0">
                 <ComboBox x:Name="cbNivelDeAcesso"  materialDesign:HintAssist.Hint="Nivel de Acesso:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0">
                     <ComboBoxItem Content="0"/>
                     <ComboBoxItem Content="1"/>
@@ -37,7 +41,7 @@
             <Grid Height="40" Margin="0 40 0 0" VerticalAlignment="Top">
                 <TextBox x:Name="tbCodigo" materialDesign:HintAssist.Hint="Código:" materialDesign:HintAssist.IsFloating="True" IsEnabled="False"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
             </Grid>
-            <Grid Margin="0 115 0 0" VerticalAlignment="Top">
+            <Grid Margin="0 180 0 0" VerticalAlignment="Top">
                 <Button x:Name="btnSalvar" Click="BtnSalvar_Click" Width="40" BorderBrush="{x:Null}" Margin="162,0,195,0">
                     <Button.Background>
                         <ImageBrush ImageSource="save.png" Stretch="Uniform"/>
