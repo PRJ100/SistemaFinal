@@ -45,7 +45,7 @@
             </Grid>
         </StackPanel>
         <Grid Height="auto" Margin="0 60">
-            <DataGrid Background="#FFCCCEDB" x:Name="dgMostraMedico" Height="auto" Loaded="DgMostraMedico_Loaded"  SelectionMode="Single" IsReadOnly="True">
+            <DataGrid Background="#FFCCCEDB" x:Name="dgMostraMedico" Height="auto" Loaded="DgMostraMedico_Loaded"  SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
@@ -70,6 +70,37 @@
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="CRM" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Crm}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ESPECIALIDADE" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Especialidade}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="NOME" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Nome}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="TELEFONE" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Telefone}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
                 </DataGrid.Columns>
 
 
