@@ -60,6 +60,11 @@ namespace SystemBase.views
         {
             new MedicoCadastroView().Show();
         }
+
+        private void MiUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            new UsuarioCadastroView().Show();
+        }
     }
 
 }

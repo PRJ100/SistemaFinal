@@ -24,6 +24,7 @@ namespace SystemBase.views
             tbCodigo.Text = b.BancoId.ToString();
             tbCodigoBanco.Text = b.Codigo.ToString();
             tbNome.Text = b.Nome;
+            
 
         }
 
