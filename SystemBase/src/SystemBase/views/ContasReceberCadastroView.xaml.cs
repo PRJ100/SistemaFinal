@@ -58,10 +58,9 @@ namespace SystemBase.views
         {
             using (DBContexto ctx = new DBContexto())
             {
-                var consulta = ctx.ContasRecber;
-                    .Include(e => e.Estado)
-                    .Include(c => c.Ceps);
-                dgMostraCidade.ItemsSource = consulta.ToList();
+                var consulta = ctx.ContasReceber;
+                   
+                dgMostraContasReber.ItemsSource = consulta.ToList();
 
             }
         }
