@@ -166,6 +166,12 @@
     <Compile Include="views\CidadeCadastroView.xaml.cs">
       <DependentUpon>CidadeCadastroView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\ContasPagarCadastro.xaml.cs">
+      <DependentUpon>ContasPagarCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\ContasPagarCadastroView.xaml.cs">
+      <DependentUpon>ContasPagarCadastroView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\EstadoCadastro.xaml.cs">
       <DependentUpon>EstadoCadastro.xaml</DependentUpon>
     </Compile>
@@ -264,6 +270,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\CidadeCadastroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\ContasPagarCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\ContasPagarCadastroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -405,6 +419,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="views\use.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\exchange %281%29.png" />
+    <Resource Include="views\exchange.png" />
+    <Resource Include="views\file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

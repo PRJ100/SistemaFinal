@@ -1,11 +1,11 @@
-﻿<Window x:Class="SystemBase.views.CidadeCadastroView"
+﻿<Window x:Class="SystemBase.views.ContasPagarCadastroView"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SystemBase.views"
         mc:Ignorable="d"
-        Title="CidadeCadastroView" Height="450" Width="800"
+        Title="ContasPagarCadastroView" Height="450" Width="800"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
@@ -17,9 +17,9 @@
     <Grid>
         <StackPanel>
             <Grid Height="60">
-                <Button HorizontalAlignment="Left" x:Name="btnNovoCidade" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoCidade_Click" >
+                <Button HorizontalAlignment="Left" x:Name="btnNovaContaPagar" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovaContaPagar_Click" >
                     <Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="adicionar.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="exchange.png"/>
                     </Button.Background>
                 </Button>
 
@@ -28,7 +28,7 @@
                         <ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
                     </Button.Background>
                 </Button>
-                <Button HorizontalAlignment="Left" x:Name="btRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtRecarregar_Click" >
+                <Button HorizontalAlignment="Left" x:Name="btnRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtnRecarregar_Click" >
                     <Button.Background>
                         <ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
                     </Button.Background>
@@ -36,21 +36,21 @@
 
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                     <TextBox x:Name="tbPesquisa" materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
-                    <Button x:Name="btnPesquisaCidade" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
+                    <Button x:Name="btnPesquisaContasPagar" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
                         <Button.Background>
-                            <ImageBrush Stretch="Uniform" ImageSource="research.png"/>
+                            <ImageBrush Stretch="Uniform" ImageSource="file.png"/>
                         </Button.Background>
                     </Button>
                 </StackPanel>
             </Grid>
         </StackPanel>
         <Grid Height="auto" Margin="0 60">
-            <DataGrid Background="#FFCCCEDB" x:Name="dgMostraCidade" Height="auto" Loaded="DgMostraCidade_Loaded"  SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
+            <DataGrid Background="#FFCCCEDB" x:Name="dgMostraContasPagar" Height="auto" Loaded="DgMostraContasPagar_Loaded"  SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
                 <DataGrid.Columns>
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnExcluirCidade" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirCidade_Click">
+                                <Button x:Name="btnExcluirContasPagar" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirContasPagar_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -62,7 +62,7 @@
                     <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ALTERAR" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button x:Name="btnAlterarCidade" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarCidade_Click">
+                                <Button x:Name="btnAlterarContasPagar" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarContasPagar_Click">
                                     <Button.Background>
                                         <ImageBrush ImageSource="pencil.png" Stretch="Uniform"/>
                                     </Button.Background>
@@ -71,30 +71,50 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="CIDADE" SortDirection="Ascending">
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="CNPJ ou CPF" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Nome}" />
+                                <TextBlock Text="{Binding CNPJ_CPF}" />
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ESTADO" SortDirection="Ascending">
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="DATA VENCIMENTO" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Estado.Nome}" />
+                                <TextBlock Text="{Binding Vencimento}" />
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="CÓDIGO IBGE" SortDirection="Ascending">
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="DESCRIÇÃO" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding CodigoIBGE}" />
+                                <TextBlock Text="{Binding Descricao}" />
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
-
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="FORMA PAGAMENTO" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding FormaPagamento}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="CONTATO" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Contato}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="VALOR" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Valor}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
 
 
 
