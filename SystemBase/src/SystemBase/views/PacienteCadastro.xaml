@@ -110,7 +110,7 @@
             </Grid>
             <Button x:Name="btnCancelar" Content="" HorizontalAlignment="Left" Margin="344,492,0,0" VerticalAlignment="Top" Width="34" BorderBrush="{x:Null}" Click="BtnCancelar_Click">
                 <Button.Background>
-                    <ImageBrush Stretch="Uniform" ImageSource="delete.png"/>
+                    <ImageBrush Stretch="Uniform" ImageSource="img/delete.png"/>
                 </Button.Background>
             </Button>
             <Grid Margin="0,411,0,0" Height="40" VerticalAlignment="Top">
@@ -122,7 +122,7 @@
         </Grid>
         <Button x:Name="button" Content="" HorizontalAlignment="Left" Height="32" Margin="288,493,0,0" VerticalAlignment="Top" Width="36" BorderBrush="{x:Null}" Click="Button_Click">
             <Button.Background>
-                <ImageBrush ImageSource="save.png" Stretch="Uniform"/>
+                <ImageBrush ImageSource="img/save.png" Stretch="Uniform"/>
             </Button.Background>
         </Button>
     </Grid>

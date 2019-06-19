@@ -25,7 +25,7 @@
         </Grid>
         <Grid Width="260" Height="400" VerticalAlignment="Center" HorizontalAlignment="Center">
             <StackPanel>
-                <Image Source="Logotipo.png" Width="88" Height="Auto" Margin="0 70 0 20" HorizontalAlignment="center"/>
+                <Image Source="img/Logotipo.png" Width="88" Height="Auto" Margin="0 70 0 20" HorizontalAlignment="center"/>
                 <TextBox x:Name="textBoxUsuario" Width="240" FontSize="13" Margin="0 13 0 0" materialDesign:HintAssist.Hint="Usuário" materialDesign:HintAssist.IsFloating="True" Foreground="#FFFFFF" BorderBrush="#89FFFFFF" CaretBrush="White"/>
                 <PasswordBox x:Name="passwordBoxSenha" Width="240" FontSize="13" Margin="0 8 0 0" materialDesign:HintAssist.Hint="Senha" materialDesign:HintAssist.IsFloating="True" Foreground="#FFFFFF" BorderBrush="#89FFFFFF" CaretBrush="White"/>
                 <Button x:Name="buttonLogar" Content="Acessar" FontSize="10" Margin="0,21,10,0" HorizontalAlignment="Right" Width="85" Background="#000072" BorderBrush="{x:Null}" Click="BtnLogar_Click" Height="23" />

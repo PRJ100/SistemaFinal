@@ -361,25 +361,25 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\notes.png" />
+    <Resource Include="views\img\notes.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\user.png" />
+    <Resource Include="views\img\user.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\pie-chart.png" />
+    <Resource Include="views\img\pie-chart.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\delete.png" />
+    <Resource Include="views\img\delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\user %281%29.png" />
+    <Resource Include="views\img\user %281%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\user %282%29.png" />
+    <Resource Include="views\img\user %282%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\save.png" />
+    <Resource Include="views\img\save.png" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\ModeloDeDados\ModeloDeDados.csproj">
@@ -388,51 +388,56 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\left-arrow.png" />
+    <Resource Include="views\img\left-arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\reload.png" />
+    <Resource Include="views\img\reload.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\bank.png" />
+    <Resource Include="views\img\bank.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\research.png" />
+    <Resource Include="views\img\research.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\pencil.png" />
+    <Resource Include="views\img\pencil.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\first-aid-kit.png" />
+    <Resource Include="views\img\first-aid-kit.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\africa.png" />
+    <Resource Include="views\img\africa.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\pill.png" />
+    <Resource Include="views\img\pill.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\adicionar %281%29.png" />
+    <Resource Include="views\img\adicionar.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\adicionar.png" />
+    <Resource Include="views\img\medico.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\medico.png" />
+    <Resource Include="views\img\hospital.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\hospital.png" />
+    <Resource Include="views\img\Logotipo-retrato.png" />
+    <Resource Include="views\img\Logotipo.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\Logotipo-retrato.png" />
-    <Resource Include="views\Logotipo.png" />
+    <Resource Include="views\img\user %284%29.png" />
+    <Resource Include="views\img\user %285%29.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\user %284%29.png" />
-    <Resource Include="views\user %285%29.png" />
+    <Resource Include="views\img\use.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="views\use.png" />
+    <Resource Include="views\img\exchange %281%29.png" />
+    <Resource Include="views\img\exchange.png" />
+    <Resource Include="views\img\plus.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\img\file.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

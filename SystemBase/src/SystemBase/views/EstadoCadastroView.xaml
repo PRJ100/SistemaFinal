@@ -20,18 +20,18 @@
             <Grid Height="60">
                 <Button HorizontalAlignment="Left" x:Name="btnNovoEstado" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoEstado_Click" >
                     <Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="adicionar.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="img/adicionar.png"/>
                     </Button.Background>
                 </Button>
 
                 <Button HorizontalAlignment="Left" x:Name="btnVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtnVolta_Click" >
                     <Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="img/left-arrow.png"/>
                     </Button.Background>
                 </Button>
                 <Button HorizontalAlignment="Left" x:Name="btnRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtnRecarregar_Click" >
                     <Button.Background>
-                        <ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
+                        <ImageBrush Stretch="Uniform" ImageSource="img/reload.png"/>
                     </Button.Background>
                 </Button>
 
@@ -39,7 +39,7 @@
                     <TextBox x:Name="tbPesquisa" materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
                     <Button x:Name="btnPesquisaEstado" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
                         <Button.Background>
-                            <ImageBrush Stretch="Uniform" ImageSource="research.png"/>
+                            <ImageBrush Stretch="Uniform" ImageSource="img/research.png"/>
                         </Button.Background>
                     </Button>
                 </StackPanel>
@@ -53,7 +53,7 @@
                             <DataTemplate>
                                 <Button x:Name="btnExcluirEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirEstado_Click">
                                     <Button.Background>
-                                        <ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
+                                        <ImageBrush ImageSource="img/delete.png" Stretch="Uniform"/>
                                     </Button.Background>
                                 </Button>
                             </DataTemplate>
@@ -65,7 +65,7 @@
                             <DataTemplate>
                                 <Button x:Name="btnAlterarEstado" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarEstado_Click">
                                     <Button.Background>
-                                        <ImageBrush ImageSource="pencil.png" Stretch="Uniform"/>
+                                        <ImageBrush ImageSource="img/pencil.png" Stretch="Uniform"/>
                                     </Button.Background>
                                 </Button>
                             </DataTemplate>

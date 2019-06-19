@@ -73,12 +73,12 @@ namespace SystemBase.views
 
         private void BtnContasReceber_Click(object sender, RoutedEventArgs e)
         {
-
+            new ContasReceberCadastroView().Show();
         }
 
         private void BtnContasPagar_Click(object sender, RoutedEventArgs e)
         {
-
+            new ContasPagarCadastroView().Show();
         }
     }
 

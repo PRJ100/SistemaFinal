@@ -33,12 +33,12 @@
             <Grid Margin="0 140 0 0" VerticalAlignment="Top">
                 <Button x:Name="btnSalvar" Click="BtnSalvar_Click" Width="40" BorderBrush="{x:Null}" Margin="162,0,195,0">
                     <Button.Background>
-                        <ImageBrush ImageSource="save.png" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="img/save.png" Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
                 <Button x:Name="btnCancelar" Click="BtnCancelar_Click" Width="40" BorderBrush="{x:Null}" Margin="207,0,150,0">
                     <Button.Background>
-                        <ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
+                        <ImageBrush ImageSource="img/delete.png" Stretch="Uniform"/>
                     </Button.Background>
                 </Button>
 

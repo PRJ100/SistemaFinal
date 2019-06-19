@@ -37,12 +37,12 @@ namespace SystemBase.views
 
         private void BtRecarregar_Click(object sender, RoutedEventArgs e)
         {
-            PreencherTabela();
+
         }
 
         private void DgMostraContasReber_Loaded(object sender, RoutedEventArgs e)
         {
-            PreencherTabela();
+
         }
 
         private void BtnExcluirContasReceber_Click(object sender, RoutedEventArgs e)
@@ -59,10 +59,10 @@ namespace SystemBase.views
             using (DBContexto ctx = new DBContexto())
             {
                 var consulta = ctx.ContasReceber;
+                   
                 dgMostraContasReber.ItemsSource = consulta.ToList();
-            }
 
-        }
+            }
         }
     }
-
+}
