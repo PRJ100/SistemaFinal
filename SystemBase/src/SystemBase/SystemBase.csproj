@@ -166,6 +166,12 @@
     <Compile Include="views\CidadeCadastroView.xaml.cs">
       <DependentUpon>CidadeCadastroView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\ContasReceberCadastro.xaml.cs">
+      <DependentUpon>ContasReceberCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\ContasReceberCadastroView.xaml.cs">
+      <DependentUpon>ContasReceberCadastroView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\EstadoCadastro.xaml.cs">
       <DependentUpon>EstadoCadastro.xaml</DependentUpon>
     </Compile>
@@ -264,6 +270,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\CidadeCadastroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\ContasReceberCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\ContasReceberCadastroView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

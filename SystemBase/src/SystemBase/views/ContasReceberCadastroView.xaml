@@ -1,0 +1,123 @@
+﻿<Window x:Class="SystemBase.views.ContasReceberCadastroView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemBase.views"
+        mc:Ignorable="d"
+        Title="ContasReceberCadastroView" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="#FF5D6B99"
+         FontFamily="{DynamicResource MaterialDesignFont}" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <StackPanel>
+            <Grid Height="60">
+                <Button HorizontalAlignment="Left" x:Name="btnNovoContasReceber" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoContasReceber_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="Medico.png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button HorizontalAlignment="Left" x:Name="btVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtVolta_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="left-arrow.png"/>
+                    </Button.Background>
+                </Button>
+                <Button HorizontalAlignment="Left" x:Name="btRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtRecarregar_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="reload.png"/>
+                    </Button.Background>
+                </Button>
+
+                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
+                    <TextBox x:Name="tbPesquisa" materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
+                    <Button x:Name="btnPesquisaContasReceber" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
+                        <Button.Background>
+                            <ImageBrush Stretch="Uniform" ImageSource="Hospital.png"/>
+                        </Button.Background>
+                    </Button>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+        <Grid Height="auto" Margin="0 60">
+            <DataGrid Background="#FFCCCEDB" x:Name="dgMostraContasReber" Height="auto" Loaded="DgMostraContasReber_Loaded"  SelectionMode="Single" IsReadOnly="True">
+                <DataGrid.Columns>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="EXLCUIR" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnExcluirContasReceber" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnExcluirContasReceber_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="delete.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="ALTERAR" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnAlterarContasReceber" Width="20" Padding="0" BorderBrush="{x:Null}" Click="BtnAlterarContasReceber_Click">
+                                    <Button.Background>
+                                        <ImageBrush ImageSource="pencil.png" Stretch="Uniform"/>
+                                    </Button.Background>
+                                </Button>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="CNPJ ou CPF" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding CNPJ_CPF}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="Vencimento" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Vencimento}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="Descrição" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Descricao}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="Forma Pagamento" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding FormaPagamento}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="Contato" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Contato}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="Valor" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Valor}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+    
+</Window>
