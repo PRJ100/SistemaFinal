@@ -26,7 +26,7 @@ namespace ModeloDeDados.Dados
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=GUSTAVO-PC\SQLEXPRESS;Database=SISTEMBASE;Trusted_Connection=True;");
+            optionsBuilder.UseSqlServer(@"Server=DEAN\SQLEXPRESS;Database=SISTEMBASE;Trusted_Connection=True;");
 
         }
     }
