@@ -164,10 +164,10 @@
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>
 
-                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="CEP" SortDirection="Ascending">
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="CEP DA RUA" SortDirection="Ascending">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <TextBlock Text="{Binding Cep.NumeroCep}"/>
+                                <TextBlock Text="{Binding CepRua}"/>
                             </DataTemplate>
                         </DataGridTemplateColumn.CellTemplate>
                     </DataGridTemplateColumn>

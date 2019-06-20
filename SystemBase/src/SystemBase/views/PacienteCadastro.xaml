@@ -72,7 +72,7 @@
                 <TextBox x:Name="tbContato" materialDesign:HintAssist.Hint="Contato:" materialDesign:HintAssist.IsFloating="True"  Height="40.001" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,-0.001,10,0" />
             </Grid>
             <Grid Margin="0,210,0,0" Grid.Column="1" Height="40" VerticalAlignment="Top">
-                <ComboBox x:Name="cbCep" ItemsSource="{Binding}" DisplayMemberPath="NumeroCep" SelectedValuePath="CepId" materialDesign:HintAssist.Hint="Cep:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
+                <TextBox x:Name="tbCepRua" materialDesign:HintAssist.Hint="Cep:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="0,0,10,0" />
             </Grid>
 
             <Grid Margin="0,250,0,0" Height="40" VerticalAlignment="Top">

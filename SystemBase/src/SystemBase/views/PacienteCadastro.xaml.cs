@@ -12,7 +12,6 @@ namespace SystemBase.views
     /// </summary>
     public partial class PacienteCadastro : Window
     {
-        public List<Cep> ceps { get; set; }
         public List<Cidade> cid { get; set; }
         private string op = "";
         public PacienteCadastro()
@@ -37,7 +36,7 @@ namespace SystemBase.views
             tbIdade.Text = p.Idade.ToString();
             cbSexo.Text = p.Sexo;
             tbNaturidade.Text = p.Naturalidade;
-            cbCep.SelectedValue = p.CepId;
+            tbCepRua.Text = p.CepRua;
             tbContato.Text = p.Contato;
             cbCidade.SelectedValue = p.CidadeId;
             tbLogradouro.Text = p.Logradouro;
@@ -65,7 +64,7 @@ namespace SystemBase.views
             p.Idade = Convert.ToInt32(tbIdade.Text);
             p.Sexo = cbSexo.Text;
             p.Naturalidade = tbNaturidade.Text;
-            p.CepId = Convert.ToInt32(cbCep.SelectedValue);
+            p.CepRua = tbCepRua.Text;
             p.CidadeId = Convert.ToInt32(cbCidade.SelectedValue);
             p.Contato = tbContato.Text;
             p.Logradouro = tbLogradouro.Text;
@@ -93,7 +92,7 @@ namespace SystemBase.views
                         p.Idade = Convert.ToInt32(tbIdade.Text);
                         p.Sexo = cbSexo.Text;
                         p.Naturalidade = tbNaturidade.Text;
-                        p.CepId = Convert.ToInt32(cbCep.SelectedValue);
+                        p.CepRua = tbCepRua.Text;
                         p.CidadeId = Convert.ToInt32(cbCidade.SelectedValue);
                         p.Contato = tbContato.Text;
                         p.Logradouro = tbLogradouro.Text;
@@ -129,12 +128,8 @@ namespace SystemBase.views
             {
                 using (DBContexto ctx = new DBContexto())
                 {
-                    var item = ctx.Ceps.ToList();
-                    ceps = item;
-
-                    var item2 = ctx.Cidades.ToList();
-                    cid = item2;
-                    cbCep.DataContext = ceps;
+                    var item = ctx.Cidades.ToList();
+                    cid = item;
                     cbCidade.DataContext = cid;
                 }
             }

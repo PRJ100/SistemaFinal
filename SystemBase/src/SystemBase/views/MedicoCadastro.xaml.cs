@@ -31,16 +31,17 @@ namespace SystemBase.views
         {
             InitializeComponent();
             op = "alterar";
+            tbCodigo.Text = m.MedicoId.ToString();
             tbCrm.Text = m.Crm.ToString();
             tbNome.Text = m.Nome;
             tbEspecialidade.Text = m.Especialidade;
-            tbTelefone.Text = m.Especialidade.ToString();
+            tbTelefone.Text = m.Telefone;
      }
 
         private void BtnSalvar_Click(object sender, RoutedEventArgs e)
         {
             Medico m = new Medico();
-            m.Crm = Convert.ToInt32(tbCrm.Text);
+            m.Crm = tbCrm.Text;
             m.Nome= tbNome.Text;
             m.Especialidade = tbEspecialidade.Text;
             m.Telefone = tbTelefone.Text;
@@ -51,10 +52,10 @@ namespace SystemBase.views
             {
                 using (DBContexto ctx = new DBContexto())
                 {
-                    m = ctx.Medicos.Find(Convert.ToInt32(tbCrm.Text));
+                    m = ctx.Medicos.Find(Convert.ToInt32(tbCodigo.Text));
                     if (m != null)
                     {
-                        m.Crm = Convert.ToInt32(tbCrm.Text);
+                        m.Crm = tbCrm.Text;
                         m.Nome = tbNome.Text;
                         m.Especialidade = tbEspecialidade.Text;
                         m.Telefone = tbTelefone.Text;

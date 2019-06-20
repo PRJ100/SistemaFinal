@@ -3,11 +3,13 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModeloDeDados.Classes
 {
-    public  class Medico
+    public class Medico
     {
         [Key]
-        [DatabaseGenerated(DatabaseGeneratedOption.None)]
-        public int Crm { get; set; }
+        public int MedicoId { get; set; }
+
+        [StringLength(20)]
+        public string Crm { get; set; }
 
         [StringLength(100)]
         public string Especialidade { get; set; }
