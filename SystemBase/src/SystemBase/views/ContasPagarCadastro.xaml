@@ -5,8 +5,67 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SystemBase.views"
         mc:Ignorable="d"
-        Title="ContasPagarCadastro" Height="450" Width="800">
+        Title="ContasPagarCadastro" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="#FF5D6B99"
+        FontFamily="{DynamicResource MaterialDesignFont}" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
     <Grid>
-        
+        <Grid Margin="0 10 0 0" VerticalAlignment="Top">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid Height="40" VerticalAlignment="Top">
+                <TextBox x:Name="tbCNPJ_CPF" materialDesign:HintAssist.Hint="CNPJ ou CPF:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+            </Grid>
+            <Grid Height="40" VerticalAlignment="Top" Grid.Column="1">
+                <DatePicker x:Name="dpVencimento" materialDesign:HintAssist.Hint="Data de Vencimento:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" BorderBrush="#89080202" />
+            </Grid>
+
+            <Grid Height="40" Margin="0 40 0 0" VerticalAlignment="Top">
+                <TextBox x:Name="tbDescricao" materialDesign:HintAssist.Hint="Descrição:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0"/>
+            </Grid>
+            <Grid Height="40" Margin="0 40 0 0" VerticalAlignment="Top" Grid.Column="1">
+                <ComboBox x:Name="cbFormaPagamento" materialDesign:HintAssist.Hint="Forma de Pagamento:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0">
+                    <ComboBoxItem Content="Boleto" />
+                    <ComboBoxItem Content="Boleto 30 dias" />
+                    <ComboBoxItem Content="Boleto 30, 60 dias" />
+                    <ComboBoxItem Content="Boleto 30, 60, 90 dias" />
+                    <ComboBoxItem Content="Boleto 30, 60, 90, 120 dias" />
+                    <ComboBoxItem Content="Cartão de Crédito" />
+                    <ComboBoxItem Content="Cartão de Débito" />
+                    <ComboBoxItem Content="Dinheiro" />
+                </ComboBox>
+            </Grid>
+            <Grid Height="40" Margin="0 80 0 0" VerticalAlignment="Top" Grid.Column="1">
+                <TextBox x:Name="tbContato" materialDesign:HintAssist.Hint="Contato:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+            </Grid>
+            <Grid Height="40" Margin="0 80 0 0" VerticalAlignment="Top">
+                <TextBox x:Name="tbValor" materialDesign:HintAssist.Hint="Valor:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+            </Grid>
+            <Grid Height="40" Margin="0 120 0 0" VerticalAlignment="Top">
+                <TextBox x:Name="tbCodigo" IsEnabled="False" materialDesign:HintAssist.Hint="Código:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
+            </Grid>
+
+            <Grid Margin="0 200 0 0" VerticalAlignment="Top">
+                <Button x:Name="btnSalvar" Click="BtnSalvar_Click" Width="40" BorderBrush="{x:Null}" Margin="162,0,195,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/save.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+                <Button x:Name="btnCancelar" Click="BtnCancelar_Click" Width="40" BorderBrush="{x:Null}" Margin="207,0,150,0">
+                    <Button.Background>
+                        <ImageBrush ImageSource="img/delete.png" Stretch="Uniform"/>
+                    </Button.Background>
+                </Button>
+
+            </Grid>
+
+        </Grid>
     </Grid>
 </Window>

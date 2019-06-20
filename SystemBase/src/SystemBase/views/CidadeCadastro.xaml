@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SystemBase.views"
         mc:Ignorable="d"
         Title="CidadeCadastro" Height="450" Width="800"
-   xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -26,7 +26,7 @@
             <Grid Height="40" VerticalAlignment="Top" Grid.Column="1">
                 <ComboBox x:Name="cbCodigoEstado" ItemsSource="{Binding}" DisplayMemberPath="Nome" SelectedValuePath="EstadoId" materialDesign:HintAssist.Hint="Estado:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
             </Grid>
-          
+
             <Grid Height="40" Margin="0 40 0 0" VerticalAlignment="Top">
                 <TextBox x:Name="tbCodigoIBGE" materialDesign:HintAssist.Hint="Código IBGE:" materialDesign:HintAssist.IsFloating="True" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" Margin="10,0" />
             </Grid>

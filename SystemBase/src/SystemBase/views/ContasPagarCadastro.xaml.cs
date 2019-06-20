@@ -1,17 +1,7 @@
 ﻿using ModeloDeDados.Classes;
+using ModeloDeDados.Dados;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 
 namespace SystemBase.views
 {
@@ -20,13 +10,68 @@ namespace SystemBase.views
     /// </summary>
     public partial class ContasPagarCadastro : Window
     {
+        private string op = "";
         public ContasPagarCadastro()
         {
             InitializeComponent();
+            op = "";
         }
         public ContasPagarCadastro(ContasPagar cp)
         {
             InitializeComponent();
+            op = "alterar";
+            tbCodigo.Text = cp.ContasPagarId.ToString();
+            tbCNPJ_CPF.Text = cp.CNPJ_CPF;
+            tbDescricao.Text = cp.Descricao;
+            dpVencimento.Text = cp.Vencimento.ToString();
+            cbFormaPagamento.Text = cp.FormaPagamento;
+            tbContato.Text = cp.Contato;
+            tbValor.Text = cp.Valor.ToString();
+
+        }
+
+        private void BtnSalvar_Click(object sender, RoutedEventArgs e)
+        {
+            ContasPagar cp = new ContasPagar();
+            cp.CNPJ_CPF = tbCNPJ_CPF.Text;
+            cp.Descricao = tbDescricao.Text;
+            cp.Vencimento = dpVencimento.SelectedDate.Value;
+            cp.FormaPagamento = cbFormaPagamento.Text;
+            cp.Contato = tbContato.Text;
+            cp.Valor = Convert.ToDecimal(tbValor.Text);
+
+            if (op == "alterar")
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    cp = ctx.ContasPagar.Find(Convert.ToInt32(tbCodigo.Text));
+                    if (cp != null)
+                    {
+                        cp.CNPJ_CPF = tbCNPJ_CPF.Text;
+                        cp.Descricao = tbDescricao.Text;
+                        cp.Vencimento = dpVencimento.SelectedDate.Value;
+                        cp.FormaPagamento = cbFormaPagamento.Text;
+                        cp.Contato = tbContato.Text;
+                        cp.Valor = Convert.ToDecimal(tbValor.Text);
+                        ctx.SaveChanges();
+                    }
+                }
+            }
+            else
+            {
+                using (var ctx = new DBContexto())
+                {
+                    ctx.ContasPagar.Add(cp);
+                    ctx.SaveChanges();
+                }
+            }
+
+            this.Close();
+        }
+
+        private void BtnCancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }
