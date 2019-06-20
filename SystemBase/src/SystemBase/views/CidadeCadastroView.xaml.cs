@@ -84,11 +84,26 @@ namespace SystemBase.views
             using (DBContexto ctx = new DBContexto())
             {
                 var consulta = ctx.Cidades
-                    .Include(e => e.Estado)
-                    .Include(c => c.Ceps);
+                    .Include(e => e.Estado);
                 dgMostraCidade.ItemsSource = consulta.ToList();
 
             }
+        }
+
+        private void BtnPesquisaCidade_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.Cidades
+                                   .Include(c => c.Estado)
+                                   where c.Nome.Contains(tbPesquisa.Text)
+                                   select c;
+                    dgMostraCidade.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
         }
     }
 }

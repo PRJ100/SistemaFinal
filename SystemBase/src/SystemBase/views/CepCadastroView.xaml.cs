@@ -85,5 +85,20 @@ namespace SystemBase.views
 
             }
         }
+
+        private void BtnPesquisaCep_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.Ceps
+                                   .Include(c => c.Cidade)
+                                   where c.NumeroCep.Contains(tbPesquisa.Text) select c;
+                    dgMostraCep.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }

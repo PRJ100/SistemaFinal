@@ -88,5 +88,22 @@ namespace SystemBase.views
                 dgMostraPaciente.ItemsSource = consulta.ToList();
             }
         }
+
+        private void BtnPesquisaPaciente_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.Pessoas
+                                   .Include(c => c.Cep)
+                                   .Include(c => c.Cidade)
+                                   where c.Nome.Contains(tbPesquisar.Text)|| c.Contato.Contains(tbPesquisar.Text) || c.CPF.Contains(tbPesquisar.Text)|| c.RG.Contains(tbPesquisar.Text)
+                                   select c;
+                    dgMostraPaciente.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }

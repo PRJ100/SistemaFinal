@@ -83,5 +83,20 @@ namespace SystemBase.views
                 dgMostraPlanos.ItemsSource = consulta.ToList();
             }
         }
+
+        private void BtnPesquisaPlano_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.Planos
+                                   where c.Nome.Contains(tbPesquisa.Text)
+                                   select c;
+                    dgMostraPlanos.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }

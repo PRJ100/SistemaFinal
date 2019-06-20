@@ -84,5 +84,18 @@ namespace SystemBase.views
             }
         }
 
+        private void BtnPesquisaMedico_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.Medicos
+                                   where c.Nome.Contains(tbPesquisa.Text) select c;
+                    dgMostraMedico.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }

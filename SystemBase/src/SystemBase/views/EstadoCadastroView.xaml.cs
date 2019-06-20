@@ -82,5 +82,20 @@ namespace SystemBase.views
             }
         }
 
+        private void BtnPesquisaEstado_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.Estados
+                                   .Include(p => p.Pais)
+                                   where c.Nome.Contains(tbPesquisa.Text) || c.Sigla.Contains(tbPesquisa.Text)
+                                   select c;
+                    dgMostraEstados.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }

@@ -73,5 +73,20 @@ namespace SystemBase.views
                 dgMostraPais.ItemsSource = consulta.ToList();
             }
         }
+
+        private void BtnPesquisaPais_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.Paises
+                                   where c.Nome.Contains(tbPesquisa.Text)
+                                   select c;
+                    dgMostraPais.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }

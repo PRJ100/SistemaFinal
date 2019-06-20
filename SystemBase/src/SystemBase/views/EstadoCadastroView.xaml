@@ -37,7 +37,7 @@
 
                 <StackPanel HorizontalAlignment="Right" Orientation="Horizontal">
                     <TextBox x:Name="tbPesquisa" materialDesign:HintAssist.Hint="PESQUISAR" materialDesign:HintAssist.IsFloating="True" Width="300" Margin="0 10" Height="40" FontSize="14" VerticalAlignment="Center" Foreground="#DDFFFFFF" />
-                    <Button x:Name="btnPesquisaEstado" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
+                    <Button x:Name="btnPesquisaEstado" Click="BtnPesquisaEstado_Click" BorderBrush="{x:Null}" Width="32" Height="auto" Margin="5 2 10 2">
                         <Button.Background>
                             <ImageBrush Stretch="Uniform" ImageSource="img/research.png"/>
                         </Button.Background>

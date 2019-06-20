@@ -82,5 +82,19 @@ namespace SystemBase.views
                 dgMostraUsuarios.ItemsSource = consulta.ToList();
             }
         }
+
+        private void BtnPesquisaUsuario_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.Usuarios where c.Login.Contains(tbPesquisa.Text)
+                                   select c;
+                    dgMostraUsuarios.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }

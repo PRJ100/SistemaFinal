@@ -1,5 +1,4 @@
-﻿using ModeloDeDados.Classes;
-using ModeloDeDados.Dados;
+﻿using ModeloDeDados.Dados;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,49 +27,32 @@ namespace SystemBase.views
 
         private void BtnNovoContasReceber_Click(object sender, RoutedEventArgs e)
         {
-            new ContasReceberCadastro().Show();
+
         }
 
         private void BtVolta_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+
         }
 
         private void BtRecarregar_Click(object sender, RoutedEventArgs e)
         {
-            PreencherTabela();
+
         }
 
-        private void DgMostraContasReceber_Loaded(object sender, RoutedEventArgs e)
+        private void DgMostraContasReber_Loaded(object sender, RoutedEventArgs e)
         {
-            PreencherTabela();
+
         }
 
         private void BtnExcluirContasReceber_Click(object sender, RoutedEventArgs e)
         {
-            if (dgMostraContasReceber.SelectedIndex >= 0)
-            {
-                ContasReceber cr = (ContasReceber)dgMostraContasReceber.Items[dgMostraContasReceber.SelectedIndex];
-                using (DBContexto ctx = new DBContexto())
-                {
-                    cr = ctx.ContasReceber.Find(cr.ContasReceberId);
-                    ctx.ContasReceber.Remove(cr);
-                    ctx.SaveChanges();
-                }
 
-            }
-            PreencherTabela();
         }
 
         private void BtnAlterarContasReceber_Click(object sender, RoutedEventArgs e)
         {
-            ContasReceber cr = new ContasReceber();
-            if (dgMostraContasReceber.SelectedIndex >= 0)
-            {
-                cr = (ContasReceber)dgMostraContasReceber.Items[dgMostraContasReceber.SelectedIndex];
 
-                new ContasReceberCadastro(cr).Show();
-            }
         }
         public void PreencherTabela()
         {
@@ -78,11 +60,24 @@ namespace SystemBase.views
             {
                 var consulta = ctx.ContasReceber;
                    
-                dgMostraContasReceber.ItemsSource = consulta.ToList();
+                dgMostraContasReber.ItemsSource = consulta.ToList();
 
             }
         }
 
-       
+        private void BtnPesquisaContasReceber_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.ContasReceber
+                                   where c.Descricao.Contains(tbPesquisa.Text)
+                                   select c;
+                    dgMostraContasReber.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }
