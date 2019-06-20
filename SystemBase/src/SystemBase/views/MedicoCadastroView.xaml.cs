@@ -55,7 +55,7 @@ namespace SystemBase.views
 
                 using (DBContexto ctx = new DBContexto())
                 {
-                    m = ctx.Medicos.Find(m.Crm);
+                    m = ctx.Medicos.Find(m.MedicoId);
                     ctx.Medicos.Remove(m);
                     ctx.SaveChanges();
                 }

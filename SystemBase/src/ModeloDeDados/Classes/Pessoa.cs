@@ -30,9 +30,8 @@ namespace ModeloDeDados.Classes
         public string RG { get; set; }
         [StringLength(80)]
         public string Contato { get; set; }
-        public int CepId { get; set; }
-        [ForeignKey("CepId")]
-        public Cep Cep { get; set; }
+        [StringLength(20)]
+        public string CepRua { get; set; }
         public int CidadeId { get; set; }
         [ForeignKey("CidadeId")]
         public Cidade Cidade { get; set; }

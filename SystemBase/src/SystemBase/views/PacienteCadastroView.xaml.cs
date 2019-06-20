@@ -83,7 +83,6 @@ namespace SystemBase.views
             using (DBContexto ctx = new DBContexto())
             {
                 var consulta = ctx.Pessoas
-                    .Include(c => c.Cep)
                     .Include(c => c.Cidade);
                 dgMostraPaciente.ItemsSource = consulta.ToList();
             }
@@ -96,7 +95,6 @@ namespace SystemBase.views
                 using (DBContexto ctx = new DBContexto())
                 {
                     var consulta = from c in ctx.Pessoas
-                                   .Include(c => c.Cep)
                                    .Include(c => c.Cidade)
                                    where c.Nome.Contains(tbPesquisar.Text)|| c.Contato.Contains(tbPesquisar.Text) || c.CPF.Contains(tbPesquisar.Text)|| c.RG.Contains(tbPesquisar.Text)
                                    select c;
