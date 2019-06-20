@@ -82,5 +82,18 @@ namespace SystemBase.views
                 dgMostraBanco.ItemsSource = consulta.ToList();
             }
         }
+
+        private void BtnPesquisaBanco_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from b in ctx.Bancos where b.Nome.Contains(tbPesquisa.Text) select b;
+                    dgMostraBanco.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }

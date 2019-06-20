@@ -90,7 +90,19 @@ namespace SystemBase.views
             }
         }
 
-       
+        private void BtnPesquisaBanco_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.Medicamentos where c.Nome.Contains(tbPesquisa.Text) || c.Descricao.Contains(tbPesquisa.Text)
+                                   select c;
+                    dgMostraMedicamentos.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 
 }

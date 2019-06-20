@@ -64,5 +64,20 @@ namespace SystemBase.views
 
             }
         }
+
+        private void BtnPesquisaContasReceber_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.ContasReceber
+                                   where c.Descricao.Contains(tbPesquisa.Text)
+                                   select c;
+                    dgMostraContasReber.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }

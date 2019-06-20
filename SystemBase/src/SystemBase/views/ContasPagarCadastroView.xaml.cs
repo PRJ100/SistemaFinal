@@ -82,5 +82,19 @@ namespace SystemBase.views
 
             }
         }
+
+        private void BtnPesquisaContasPagar_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                using (DBContexto ctx = new DBContexto())
+                {
+                    var consulta = from c in ctx.ContasPagar where c.Descricao.Contains(tbPesquisa.Text)
+                                   select c;
+                    dgMostraContasPagar.ItemsSource = consulta.ToList();
+                }
+            }
+            catch { }
+        }
     }
 }
