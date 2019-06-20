@@ -37,7 +37,7 @@ namespace SystemBase.views
 
         private void BtRecarregar_Click(object sender, RoutedEventArgs e)
         {
-
+           
         }
 
         private void DgMostraContasReber_Loaded(object sender, RoutedEventArgs e)
@@ -60,7 +60,7 @@ namespace SystemBase.views
             {
                 var consulta = ctx.ContasReceber;
                    
-                dgMostraContasReber.ItemsSource = consulta.ToList();
+                dgMostraContasReceber.ItemsSource = consulta.ToList();
 
             }
         }
@@ -74,7 +74,7 @@ namespace SystemBase.views
                     var consulta = from c in ctx.ContasReceber
                                    where c.Descricao.Contains(tbPesquisa.Text)
                                    select c;
-                    dgMostraContasReber.ItemsSource = consulta.ToList();
+                    dgMostraContasReceber.ItemsSource = consulta.ToList();
                 }
             }
             catch { }
