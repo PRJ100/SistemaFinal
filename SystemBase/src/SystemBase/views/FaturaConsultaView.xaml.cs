@@ -77,6 +77,8 @@ namespace SystemBase.views
             }
 
             PreencherTabela();
+            new AgendamentosDoDiaView().Show();
+            this.Close();
         }
 
         private void BtnFaturarConsulta_Click(object sender, RoutedEventArgs e)

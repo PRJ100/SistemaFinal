@@ -126,6 +126,8 @@ namespace SystemBase.views
             }
 
             PreencherTabela();
+            new FaturaConsultaView().Show();
+            this.Close();
         }
     }
 }

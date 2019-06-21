@@ -51,6 +51,7 @@ namespace SystemBase.views
             f.PlanoId = Convert.ToInt32(cbCodigoPlano.SelectedValue);
             f.Valor = Convert.ToDecimal(tbValor.Text);
             f.TipoPagamento = cbTipoPagamento.Text;
+            f.Status = "Faturado";
 
             using (DBContexto ctx = new DBContexto())
             {
