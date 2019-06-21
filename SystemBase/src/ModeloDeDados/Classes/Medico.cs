@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace ModeloDeDados.Classes
@@ -19,5 +20,6 @@ namespace ModeloDeDados.Classes
 
         [StringLength(20)]
         public string Telefone { get; set; }
+        public List<Agendamento> Agendamentos { get; set; }
     }
 }

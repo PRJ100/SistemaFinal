@@ -148,6 +148,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="views\AgendamentoCadastro.xaml.cs">
+      <DependentUpon>AgendamentoCadastro.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\AgendamentoCadastroView.xaml.cs">
+      <DependentUpon>AgendamentoCadastroView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\BancoCadastro.xaml.cs">
       <DependentUpon>BancoCadastro.xaml</DependentUpon>
     </Compile>
@@ -255,6 +261,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Page Include="views\AgendamentoCadastro.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\AgendamentoCadastroView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="views\BancoCadastro.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -438,6 +452,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="views\img\file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\img\calendar %281%29.png" />
+    <Resource Include="views\img\calendar %282%29.png" />
+    <Resource Include="views\img\calendar %283%29.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace ModeloDeDados.Classes
 {
@@ -10,5 +11,6 @@ namespace ModeloDeDados.Classes
         public string Nome { get; set; }
         [StringLength(50)]
         public string Numero { get; set; }
+        public List<Agendamento> Agendamentos { get; set; }
     }
 }
