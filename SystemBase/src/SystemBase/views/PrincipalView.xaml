@@ -38,6 +38,7 @@
                     <MenuItem Header="Finânceiro" Height="40">
                         <MenuItem x:Name="miContasPagar" Header="Contas a pagar" Click="BtnContasPagar_Click"/>
                         <MenuItem x:Name="miContasReceber" Header="Contas a Receber" Click="BtnContasReceber_Click"/>
+                        <MenuItem x:Name="miFaturaConsulta" Header="Faturar Consulta" Click="MiFaturaConsulta_Click"/>
                         <MenuItem Header="Relatório Mensal"/>
                     </MenuItem>
                     <MenuItem Header="Consulta" Height="40"/>

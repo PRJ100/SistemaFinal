@@ -198,6 +198,12 @@
     <Compile Include="views\EstadoCadastroView.xaml.cs">
       <DependentUpon>EstadoCadastroView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="views\FaturaConsulta.xaml.cs">
+      <DependentUpon>FaturaConsulta.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="views\FaturaConsultaView.xaml.cs">
+      <DependentUpon>FaturaConsultaView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
@@ -328,6 +334,14 @@
     <Page Include="views\EstadoCadastroView.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="views\FaturaConsulta.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="views\FaturaConsultaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="views\LoginView.xaml">
       <SubType>Designer</SubType>
@@ -475,6 +489,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="views\img\schedule.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="views\img\invoice.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
