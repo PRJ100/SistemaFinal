@@ -24,6 +24,8 @@ namespace ModeloDeDados.Classes
         public int PlanoId { get; set; }
         [ForeignKey("PlanoId")]
         public Plano Plano { get; set; }
+        [StringLength(30)]
+        public string Status { get; set; }
 
     }
 }

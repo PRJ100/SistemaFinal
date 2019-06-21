@@ -1,0 +1,110 @@
+﻿<Window x:Class="SystemBase.views.AgendamentosDoDiaView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SystemBase.views"
+        mc:Ignorable="d"
+        Title="Agendamentos Do Dia" Height="450" Width="800"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="#FF5D6B99"
+        FontFamily="{DynamicResource MaterialDesignFont}" WindowState="Maximized" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid>
+        <StackPanel>
+            <Grid Height="60">
+                <Button HorizontalAlignment="Left" x:Name="btnNovoAgendamento" BorderBrush="{x:Null}" Width="32" Margin="20 0 20 0" Height="auto" Click="BtnNovoAgendamento_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="img/calendar (1).png"/>
+                    </Button.Background>
+                </Button>
+
+                <Button HorizontalAlignment="Left" x:Name="btnVolta" BorderBrush="{x:Null}" Width="32" Margin="200,0,0,0" Height="auto" Click="BtnVolta_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="img/left-arrow.png"/>
+                    </Button.Background>
+                </Button>
+                <Button HorizontalAlignment="Left" x:Name="btnRecarregar" BorderBrush="{x:Null}" Width="32" Margin="108,0,0,0" Height="auto" Click="BtnRecarregar_Click" >
+                    <Button.Background>
+                        <ImageBrush Stretch="Uniform" ImageSource="img/reload.png"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+        </StackPanel>
+        <StackPanel HorizontalAlignment="Left" Width="280" Margin="0 60 0 0">
+            <Grid >
+                <DatePicker x:Name="dpDataAgendamento" materialDesign:HintAssist.Hint="Data do Agendamento:" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="Black" Margin="10,0" BorderBrush="#89080202"/>
+            </Grid>
+            <Grid Margin="0">
+                <materialDesign:TimePicker x:Name="tpHora" materialDesign:HintAssist.Hint="Hora do Agendamento:" Is24Hours="True" materialDesign:HintAssist.IsFloating="True"  Height="40" FontSize="14" VerticalAlignment="Center" Foreground="Black" Margin="10,0" BorderBrush="#89080202"/>
+            </Grid>
+        </StackPanel>
+        <Grid Height="auto" Margin="282 60 2 0">
+            <DataGrid Background="#FFCCCEDB" x:Name="dgMostraAgendametosDoDia" Height="auto" Loaded="DgMostraAgendametosDoDia_Loaded"  SelectionMode="Single" IsReadOnly="True" AutoGenerateColumns="False">
+                <DataGrid.Columns>
+
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="HORÁRIO" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding HorarioConsuta}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="PACIENTE" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Pessoa.Nome}" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="STATUS" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="tbStatus" Text="{Binding Status}" Foreground="#FFF90000" />
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="CHEGOU" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnChegou" Content="Chegou" Click="BtnChegou_Click" Height="25" Padding="0" BorderBrush="{x:Null}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="INICIAR CONSULTA" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnIniciarConsulta" Height="25" Click="BtnIniciarConsulta_Click" Content="Iniciar consulta" Padding="0" BorderBrush="{x:Null}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                    <DataGridTemplateColumn ClipboardContentBinding="{x:Null}" Header="FINALIZAR CONSULTA" SortDirection="Ascending">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button x:Name="btnFinalizarConsulta" Height="25" Click="BtnFinalizarConsulta_Click" Content="Finalizar consulta" Padding="0" BorderBrush="{x:Null}"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+
+
+
+
+
+
+
+
+                </DataGrid.Columns>
+
+
+            </DataGrid>
+        </Grid>
+
+    </Grid>
+</Window>

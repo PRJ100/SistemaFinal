@@ -85,6 +85,11 @@ namespace SystemBase.views
         {
             new AgendamentoCadastroView().Show();
         }
+
+        private void BtnAgendamentosDoDia_Click(object sender, RoutedEventArgs e)
+        {
+            new AgendamentosDoDiaView().Show();
+        }
     }
 
 }
