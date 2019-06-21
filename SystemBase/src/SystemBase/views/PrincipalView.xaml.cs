@@ -80,6 +80,11 @@ namespace SystemBase.views
         {
             new ContasPagarCadastroView().Show();
         }
+
+        private void MiAgendamento_Click(object sender, RoutedEventArgs e)
+        {
+            new AgendamentoCadastroView().Show();
+        }
     }
 
 }

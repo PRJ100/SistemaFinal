@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:SystemBase.views"
         mc:Ignorable="d"
         Title="CepCadastro" Height="450" Width="800"
-     xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
