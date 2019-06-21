@@ -38,10 +38,8 @@
                     <MenuItem Header="Finânceiro" Height="40">
                         <MenuItem x:Name="miContasPagar" Header="Contas a pagar" Click="BtnContasPagar_Click"/>
                         <MenuItem x:Name="miContasReceber" Header="Contas a Receber" Click="BtnContasReceber_Click"/>
-                        <MenuItem Header="Notas Fiscais"/>
                         <MenuItem Header="Relatório Mensal"/>
                     </MenuItem>
-                    <MenuItem Header="Consulta" Height="40"/>
                     <MenuItem Header="Consulta" Height="40"/>
                 </Menu>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment ="Right" Margin="0,0,100,0" Width="177">
