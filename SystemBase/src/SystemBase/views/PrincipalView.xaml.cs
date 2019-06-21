@@ -90,6 +90,11 @@ namespace SystemBase.views
         {
             new AgendamentosDoDiaView().Show();
         }
+
+        private void MiFaturaConsulta_Click(object sender, RoutedEventArgs e)
+        {
+            new FaturaConsultaView().Show();
+        }
     }
 
 }

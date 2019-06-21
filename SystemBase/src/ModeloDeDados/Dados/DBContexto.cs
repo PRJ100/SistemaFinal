@@ -20,6 +20,7 @@ namespace ModeloDeDados.Dados
         public DbSet<ContasPagar> ContasPagar { get; set; }
         public DbSet<ContasReceber> ContasReceber { get; set; }
         public DbSet<Agendamento> Agendamentos { get; set; }
+        public DbSet<Faturamento> Faturamentos { get; set; }
 
 
 

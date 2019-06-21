@@ -53,11 +53,12 @@ namespace SystemBase.views
             {
                 var consulta = from c in ctx.Agendamentos
                     .Include(c => c.Pessoa)
-                               where c.DataConsulta.Equals(DateTime.Today)
+                               where c.DataConsulta.Equals(DateTime.Today) && c.Status != "Finalizada"
                                select c;
                 dgMostraAgendametosDoDia.ItemsSource = consulta.ToList();
 
             }
+            
         }
 
         private void BtnChegou_Click(object sender, RoutedEventArgs e)
