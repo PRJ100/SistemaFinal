@@ -1,6 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Windows;
+﻿using System.Windows;
+using Stimulsoft.Report.Wpf;
+using Stimulsoft.Report;
+using ModeloDeDados.Classes;
+using ModeloDeDados.Dados;
+using System.Linq;
 
 namespace SystemBase.views
 {
@@ -94,6 +97,26 @@ namespace SystemBase.views
         private void MiFaturaConsulta_Click(object sender, RoutedEventArgs e)
         {
             new FaturaConsultaView().Show();
+        }
+
+        private void BtnRelatorio_Click(object sender, RoutedEventArgs e)
+        {
+
+            using (DBContexto ctx = new DBContexto())
+            {
+                var consulta = ctx.ContasReceber;
+
+                
+                Faturamento cp = new Faturamento();
+                StiReport report = new StiReport();
+
+                report.RegData("ContasPagar", consulta.ToList());
+
+                report.Load(@"C:\Users\Romário Moreira\Source\Repos\SistemaFinal\SystemBase\src\SystemBase\views\Teste.mrt");
+
+                report.ShowWithWpf();
+            }
+
         }
     }
 

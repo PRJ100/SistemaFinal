@@ -38,11 +38,41 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="LibExcel, Version=1.0.0.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Engine.2019.3.2\lib\net45\LibExcel.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialDesignColors, Version=1.1.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MaterialDesignColors.1.1.3\lib\net45\MaterialDesignColors.dll</HintPath>
     </Reference>
     <Reference Include="MaterialDesignThemes.Wpf, Version=2.5.1.1345, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\MaterialDesignThemes.2.5.1\lib\net45\MaterialDesignThemes.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNetCore.Hosting.2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Abstractions, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNetCore.Hosting.Abstractions.2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Hosting.Server.Abstractions, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNetCore.Hosting.Server.Abstractions.2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Html.Abstractions, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNetCore.Html.Abstractions.2.0.2\lib\netstandard2.0\Microsoft.AspNetCore.Html.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNetCore.Http.2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNetCore.Http.Abstractions.2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Extensions, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNetCore.Http.Extensions.2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNetCore.Http.Features.2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.Http.Features.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNetCore.WebUtilities, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNetCore.WebUtilities.2.0.3\lib\netstandard2.0\Microsoft.AspNetCore.WebUtilities.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.EntityFrameworkCore, Version=2.2.4.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.EntityFrameworkCore.2.2.4\lib\netstandard2.0\Microsoft.EntityFrameworkCore.dll</HintPath>
@@ -74,11 +104,29 @@
     <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Extensions.Configuration.Binder.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.EnvironmentVariables, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Configuration.EnvironmentVariables.2.0.2\lib\netstandard2.0\Microsoft.Extensions.Configuration.EnvironmentVariables.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.FileExtensions, Version=2.0.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Configuration.FileExtensions.2.0.2\lib\netstandard2.0\Microsoft.Extensions.Configuration.FileExtensions.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.DependencyInjection, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.2.2.0\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.FileProviders.Abstractions.2.0.1\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileProviders.Physical, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.FileProviders.Physical.2.0.1\lib\netstandard2.0\Microsoft.Extensions.FileProviders.Physical.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.FileSystemGlobbing, Version=2.0.1.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.FileSystemGlobbing.2.0.1\lib\netstandard2.0\Microsoft.Extensions.FileSystemGlobbing.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Hosting.Abstractions, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.Hosting.Abstractions.2.0.3\lib\netstandard2.0\Microsoft.Extensions.Hosting.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Logging, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Extensions.Logging.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
@@ -86,18 +134,111 @@
     <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Extensions.Logging.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.ObjectPool, Version=2.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Extensions.ObjectPool.2.0.0\lib\netstandard2.0\Microsoft.Extensions.ObjectPool.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Extensions.Options, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Extensions.Options.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Primitives, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Microsoft.Extensions.Primitives.2.2.0\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Net.Http.Headers, Version=2.0.3.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Net.Http.Headers.2.0.3\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Client, Version=7.5.4.30215, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.OData.Client.7.5.4\lib\net45\Microsoft.OData.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Core, Version=7.5.4.30215, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.OData.Core.7.5.4\lib\portable-net45+win8+wpa81\Microsoft.OData.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.OData.Edm, Version=7.5.4.30215, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.OData.Edm.7.5.4\lib\portable-net45+win8+wpa81\Microsoft.OData.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Spatial, Version=7.5.4.30215, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Spatial.7.5.4\lib\portable-net45+win8+wpa81\Microsoft.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Win32.Registry, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Win32.Registry.4.4.0\lib\net461\Microsoft.Win32.Registry.dll</HintPath>
+    </Reference>
     <Reference Include="Remotion.Linq, Version=2.2.0.0, Culture=neutral, PublicKeyToken=fee00910d6e5f53b, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Remotion.Linq.2.2.0\lib\net45\Remotion.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Base, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Engine.2019.3.2\lib\net45\Stimulsoft.Base.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Client.Designer, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Client.Designer.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Data, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Engine.2019.3.2\lib\net45\Stimulsoft.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Data.OData, Version=2019.2.3.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Data.OData.2019.2.3\lib\net45\Stimulsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Database.Wpf, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Database.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Editor.Wpf, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Editor.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Map, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Engine.2019.3.2\lib\net45\Stimulsoft.Map.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Engine.2019.3.2\lib\net45\Stimulsoft.Report.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Check, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Engine.2019.3.2\lib\net45\Stimulsoft.Report.Check.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Helper, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Engine.2019.3.2\lib\net45\Stimulsoft.Report.Helper.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf.BlackTheme, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.BlackTheme.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf.Office2003BlueTheme, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.Office2003BlueTheme.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf.Office2003OliveGreenTheme, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.Office2003OliveGreenTheme.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf.Office2003SilverTheme, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.Office2003SilverTheme.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf.Office2007BlackTheme, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.Office2007BlackTheme.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf.Office2007BlueTheme, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.Office2007BlueTheme.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf.Office2007SilverTheme, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.Office2007SilverTheme.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf.Office2010BlueTheme, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.Office2010BlueTheme.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.Wpf.Office2010WhiteTheme, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.Wpf.Office2010WhiteTheme.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.Report.WpfDesign, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Wpf.2019.3.2\lib\net45\Stimulsoft.Report.WpfDesign.dll</HintPath>
+    </Reference>
+    <Reference Include="Stimulsoft.System, Version=2019.3.2.0, Culture=neutral, PublicKeyToken=ebe6666cba19647a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Engine.NetCore.2019.3.2\lib\netstandard2.0\Stimulsoft.System.dll</HintPath>
+    </Reference>
+    <Reference Include="Svg, Version=2.2.1.39233, Culture=neutral, PublicKeyToken=12a0bac221edeae2, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Stimulsoft.Reports.Engine.2019.3.2\lib\net45\Svg.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.CodeDom, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.CodeDom.4.4.0\lib\net461\System.CodeDom.dll</HintPath>
     </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.2.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Collections.Immutable.1.5.0\lib\netstandard2.0\System.Collections.Immutable.dll</HintPath>
@@ -114,6 +255,9 @@
       <HintPath>..\..\packages\System.Diagnostics.DiagnosticSource.4.5.0\lib\net46\System.Diagnostics.DiagnosticSource.dll</HintPath>
     </Reference>
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Drawing.Common, Version=4.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Drawing.Common.4.5.1\lib\net461\System.Drawing.Common.dll</HintPath>
+    </Reference>
     <Reference Include="System.Interactive.Async, Version=3.2.0.0, Culture=neutral, PublicKeyToken=94bc3704cddfc263, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Interactive.Async.3.2.0\lib\net46\System.Interactive.Async.dll</HintPath>
     </Reference>
@@ -124,10 +268,25 @@
     <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
     </Reference>
+    <Reference Include="System.Reflection.Metadata, Version=1.4.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Reflection.Metadata.1.5.0\lib\netstandard2.0\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\..\packages\System.Runtime.CompilerServices.Unsafe.4.5.1\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.AccessControl.4.4.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Security.Principal.Windows.4.4.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=4.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Text.Encoding.CodePages.4.4.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Text.Encodings.Web.4.4.0\lib\netstandard2.0\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
@@ -261,6 +420,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="views\Teste.mrt" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -483,6 +643,141 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="views\img\invoice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\zh-CHT.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\zh-CHS.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\vi.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\uk.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\tr.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\sv.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\sv.ext.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\sr.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\sk.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ru.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ru.ext.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ro.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\pt.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\pt-BR.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\pl.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\nl.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\nb-NO.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\lt.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ko.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ko.ext.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ka.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ja.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ja.ext.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\it.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\id.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\hu.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\hr.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\gl-ES.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\fr.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\fr.ext.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\fa.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\eu-ES.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\es.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\en.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\en.ext.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\en-GB.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\el-GR.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\de.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\de.ext.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\cs.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ca-ES.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\bh.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\bg.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\be.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Localization\ar.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

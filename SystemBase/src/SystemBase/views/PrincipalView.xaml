@@ -130,6 +130,13 @@
                 </Button.Background>
             </Button>
             <TextBlock Margin="0 10 0 0" Text="Agendamentos Do Dia" Grid.Column="4" Grid.Row="1" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
+            
+            <Button BorderBrush="{x:Null}" Style="{StaticResource MaterialDesignFloatingActionAccentButton}" Height="auto" Width="auto"  Grid.Column="4" Margin="40,40,40,20" Click="BtnRelatorio_Click" x:Name="btnRelatorio" Grid.Row="2">
+                <Button.Background>
+                    <ImageBrush ImageSource="img/schedule.png" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <TextBlock Margin="0 10 0 0" Text="Relatorio" Grid.Column="4" Grid.Row="2" VerticalAlignment="Bottom" HorizontalAlignment="Center"/>
 
 
         </Grid>
